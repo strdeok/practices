@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div id="box">
+        <div id="input_area">
+          <div class="inputs" id="day">
+            Day
+            <input type="text" id="day_input" placeholder="DD" />
+            <div class="error" id="day_empty">This field is required</div>
+            <div class="error" id="day_error">Must be a valid day</div>
+            <div class="error" id="overday">Must be a valid date</div>
+          </div>
+          <div class="inputs" id="month">
+            Month
+            <input type="text" id="month_input" placeholder="MM" />
+            <div class="error" id="month_empty">This field is required</div>
+            <div class="error" id="month_error">Must ve a valid month</div>
+          </div>
+          <div class="inputs" id="year">
+            Year
+            <input type="text" id="year_input" placeholder="YYYY" />
+            <div class="error" id="year_empty">This field is required</div>
+            <div class="error" id="past">Must be in the past</div>
+          </div>
+        </div>
+
+        <div id="show">
+          <button onclick="day_cal()">
+            <img src="assets/images/icon-arrow.svg" />
+          </button>
+          <div id="fonts">
+            <div class="big_font">
+              <div class="change">--</div>
+              years
+            </div>
+            <div class="big_font">
+              <div class="change">--</div>
+              months
+            </div>
+            <div class="big_font">
+              <div class="change">--</div>
+              days
+            </div>
+          </div>
+        </div>
+        <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">str_deok</a>.
+  </div> -->
+      </div>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

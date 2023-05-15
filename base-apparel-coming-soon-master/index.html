@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <img id="mob_logo" src="images/logo.svg" alt="logo" />
+      <img id="mob_img" src="images/hero-mobile.jpg" alt="hero-mobile" />
+      <img id="des_img" src="images/hero-desktop.jpg" alt="hero-desktop" />
+      
+      <div id="txt_part">
+        <img id="des_logo" src="images/logo.svg">
+        <div id="title">
+          <div id="we">We're</div>
+          coming soon
+        </div>
+
+        <div id="article">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </div>
+        
+        <form action="#">
+          <input type="text" id="email" placeholder="Email Address" />
+          <img id="error" src="images/icon-error.svg" />
+          <button type="submit" onclick="val()"><img src="images/icon-arrow.svg" /></button>
+        </form>
+         <div id="error_msg">Please provide a valid email</div>
+        <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/strdeok">str_deok</a>.
+    </p>
+  </footer> -->
+      </div>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>
