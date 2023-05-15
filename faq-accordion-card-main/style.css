@@ -1,0 +1,166 @@
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: no-repeat, linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    align-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px none;
+    background-color: white;
+    border-radius: 20px;
+    margin: 60px auto 10px;
+    width: 84vw;
+    height: 68%;
+    align-items: center;
+}
+
+.des-img {
+    display: none;
+}
+
+#mob_img {
+    width: 230px;
+    margin: -108px 50vw 0;
+}
+
+#mob_pattern {
+    margin: -75px 50vw 0;
+    width: 230px;
+}
+
+h1 {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#buttons {
+    position: relative;
+    top: 35px;
+}
+
+button {
+    background-color: white;
+    border: hidden;
+}
+
+button:hover {
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+.button_active {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.questions {
+    border: solid 1px white;
+    border-bottom-color: hsl(240, 5%, 91%);
+}
+
+.qq {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin: 15px 0;
+}
+
+.arrow {
+    height: 10px;
+}
+
+.rotate {
+    transform: rotateX(-180deg);
+}
+
+.answers {
+    display: none;
+    position: relative;
+    width: 70vw;
+    margin-bottom: 20px;
+    color: hsl(237, 12%, 33%)
+}
+.answers_active{
+    display: block;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (min-width: 1400px) {
+    *{
+        font-size: 14px;
+    }
+    main {
+        overflow: hidden;
+        width: 60vw;
+        height: 70vh;
+        flex-direction: row;
+    }
+
+    .mob-img {
+        display: none;
+    }
+
+    .des-img {
+        display: block;
+
+    }
+
+    #des-img {
+        position: relative;
+        top: -33em;
+        left: -6.2em;
+        width: 472px;
+    }
+
+    #box {
+        position: absolute;
+        top: 26em;
+        left: 15em;
+        width: 191px;
+    }
+    #des-pattern {
+        width: 966px;
+        position: relative;
+        top: 8em;
+        left: -41.5em;
+    }
+    h1 {
+        top: -150px;
+        right: 480px;
+    }
+    
+    #buttons {
+        position: relative;
+        right: 550px;
+        width: 300px;
+    }
+    .qq {
+        width: 25em;
+    }
+    .questions {
+        width: 25em;
+    }
+    .answers {
+        width: 25em;
+    }
+}
