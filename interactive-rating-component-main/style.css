@@ -1,0 +1,108 @@
+* {
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    font-size: 14px;
+    background-color: hsl(216, 12%, 8%);
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+.paragraph {
+    color: white;
+    background-color: hsl(213, 19%, 18%, 0.6);
+    border-radius: 10px;
+    width: 290px;
+    height: 320px;
+    padding: 25px;
+}
+
+#before_rate {
+    /* display: none; */
+}
+#star_logo {
+    background-color: hsl(213, 19%, 18%);
+    width: 15px;
+    padding: 15px;
+    border-radius: 50%;
+}
+.article{
+    color: hsl(216, 12%, 54%);
+    margin-bottom: 20px;
+}
+#rating {
+    display: flex;
+    justify-content: center;
+}
+
+.ratings {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: hidden hsl(216, 12%, 54%);
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(216, 12%, 54%);
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratings:hover {
+    cursor: pointer;
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+}
+
+input {
+    text-align: center;
+    width: 100%;
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    border: hidden;
+    border-radius: 20px;
+    height: 40px;
+    margin-top: 15px;
+    letter-spacing: 3px;
+}
+
+input:hover {
+    cursor: pointer;
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+/* after rate */
+#after_rate {
+    display: none;
+    text-align: center;
+}
+#thanks {
+    margin-top: 10px;
+}
+#selected {
+    border-radius: 20px;
+    color:hsl(25, 97%, 53%);
+    background-color: hsl(213, 19%, 18%);
+    padding: 6px 0px;
+    width: 160px;
+    margin: 15px auto;
+}
+#thanks_aritcle {
+    color:hsl(216, 12%, 54%);
+}
+.change {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+  }
+.change:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
