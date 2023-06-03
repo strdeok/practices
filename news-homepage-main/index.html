@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="side_bar">
+        <img src="assets/images/icon-menu-close.svg" alt="close" onclick="deactive()">
+        <p>Home</p>
+        <p>News</p>
+        <p>Popular</p>
+        <p>Trending</p>
+        <p>Categories</p>
+      </div>
+      <img alt="logo" src="assets/images/logo.svg" id="logo" />
+      <img alt="menu" src="assets/images/icon-menu.svg" id="menu" onclick="menu()"/>
+      <div id="menu" style="display: none">
+        Home New Popular Trending Categories
+      </div>
+      <img
+        alt="image-web-3-desktop"
+        src="assets/images/image-web-3-desktop.jpg"
+        id="des_img"
+      />
+      <img
+        alt="image-web-3-mobile"
+        src="assets/images/image-web-3-mobile.jpg"
+        id="mob_img"
+      />
+      <div id="big_font">The Bright Future of Web 3.0?</div>
+      <p>
+        We dive into the next evolution of the web that claims to put the power
+        of the platforms back into the hands of the people. But is it really
+        fulfilling its promise?
+      </p>
+      <button>Read more</button>
+      <div id="black_box">
+        <div id="box_yellow">New</div>
+        <a class="box_new">
+          <h2>Hydrogen VS Electric Cars</h2>
+          <div class="box_in_article">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </div>
+        </a>
+        <a class="box_new">
+          <h2>The Downsides of AI Artistry</h2>
+          <div class="box_in_article">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </div>
+        </a>
+        <a class="box_new">
+          <h2>Is VC Funding Drying Up?</h2>
+          <div class="box_in_article">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </div>
+        </a>
+      </div>
+
+      <div id="white_box">
+        <a class="white_num">
+          <img
+            src="assets/images/image-retro-pcs.jpg"
+            alt="image-retro-pcs"
+            id="retro_pc"
+            class="images"
+          />
+          <div class="right_txt">
+            <div class="num">01</div>
+            <div class="head">Reviving Retro PCs</div> 
+            What happens when old PCs are given modern
+            upgrades?
+          </div>
+        </a>
+        <a class="white_num">
+          <img
+            src="assets/images/image-top-laptops.jpg"
+            alt="image-top-laptops"
+            id="laptop"
+            class="images"
+          />
+          <div class="right_txt">
+            <div class="num">02</div>
+            <div class="head">Top 10 Laptops of 2022 </div>
+            Our best picks for various needs and budgets.
+          </div>
+        </a>
+        <a class="white_num">
+          <img
+            src="assets/images/image-gaming-growth.jpg"
+            alt="image-gaming-growth"
+            id="gaming"
+            class="images"
+          />
+          <div class="right_txt">
+            <div class="num">03</div>
+            <div class="head">The Growth of Gaming </div>
+            How the pandemic has sparked fresh
+            opportunities.
+          </div>
+        </a>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
