@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="images">
+        <img class="images" src="images/bg-mobile-light.jpg" />
+        <img class="images" src="images/bg-mobile-dark.jpg" />
+        <img class="images" src="images/bg-desktop-dark.jpg" />
+        <img class="images" src="images/bg-desktop-light.jpg" />
+      </div>
+
+      <div style="position: absolute; z-index: 1">
+        <div id="top">
+          <p>Todo</p>
+          <img
+            onclick="turn_lightmode()"
+            class="light_mode"
+            src="images/icon-sun.svg"
+          />
+          <img
+            onclick="turn_darkmode()"
+            class="dark_mode"
+            src="images/icon-moon.svg"
+          />
+        </div>
+
+        <div id="middle">
+          <div id="add" class="adds"draggable="true">
+            <div class="check_button" onclick="check()">
+              <img src="images/icon-check.svg" />
+            </div>
+            <input placeholder="Create a new todo..." />
+          </div>
+          <div class="todo" id="todo_list"></div>
+          <div id="middle_bar">
+            <div>
+              <!-- Add dynamic number -->
+              items left
+            </div>
+            <div id="clear" onclick="clear()">Clear Completed</div>
+          </div>
+        </div>
+
+        <div id="bottom">
+          <div onclick="show_all()">All</div>
+          <div onclick="show_active()">Active</div>
+          <div onclick="show_completed()">Completed</div>
+        </div>
+
+        <p id="notice">Drag and drop to reorder list</p>
+
+        <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>. -->
+      </div>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
