@@ -1,0 +1,269 @@
+* {
+    font-family: "League Spartan", sans-serif;
+    font-size: 14px;
+
+}
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 auto;
+    width: 1440px;
+    height: 800px;
+}
+
+.nav-bar {
+    position: absolute;
+    margin: 50px;
+    color: white;
+    z-index: 1;
+}
+
+.hamburger {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+nobr {
+    font-weight: 400;
+    font-size: 26px;
+    margin-right: 20px;
+}
+
+
+.container {
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    position: relative;
+}
+
+.container:not(.foot_article) {
+    height: 66%;
+}
+
+.container .container {
+    height: 100%;
+    display: block;
+    position: relative;
+    padding: 40px 70px;
+    box-sizing: border-box;
+}
+
+.product-img-desktop {
+    width: 840px;
+}
+
+.product-img-mobile {
+    display: none;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.main_text {
+    color: hsl(0, 0%, 63%);
+    line-height: 25px;
+    height: 30%;
+}
+
+.shopping {
+    text-transform: uppercase;
+    letter-spacing: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.shopping:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 63%);
+}
+
+.shopping:hover svg {
+    fill: hsl(0, 0%, 63%);
+}
+
+/* .header1 {
+    display: none;
+} */
+
+.header2 {
+    display: none;
+}
+
+.header3 {
+    display: none;
+}
+
+button {
+    background-color: black;
+    border: none;
+    padding: 20px 33.3px;
+}
+
+button:nth-child(2) {
+    position: relative;
+    left: -5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 27%);
+}
+
+.control {
+    position: relative;
+    left: -70px;
+    bottom: -138px;
+    width: 200px;
+    height: 100px;
+}
+
+.foot_article {
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+    height: 34%
+}
+
+.foot_article img:nth-child(1) {
+    width: 420px;
+    height: 266px;
+}
+
+.foot_article img:nth-child(3) {
+    width: 440px;
+    height: 266px;
+}
+
+.bottom-title {
+    font-weight: 700;
+    letter-spacing: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.foot_article .container {
+    color: hsl(0, 0%, 63%);
+    line-height: 20px;
+}
+
+@media all and (max-width: 375.2px) {
+
+    body,
+    main {
+        width: 375px;
+    }
+
+    .hamburger {
+        display: inline;
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
+
+    .modal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        left: -40px;
+        top: -200px;
+        width: 375px;
+        height: 80px;
+        background-color: white;
+        transition: all 1s;
+
+    }
+
+    a {
+        color: black;
+        text-transform: lowercase;
+        font-weight: 700;
+    }
+
+    .close-btn:hover {
+        cursor: pointer;
+    }
+
+    .nav-bar {
+        margin: 0;
+        top: 50px;
+        margin-left: 40px;
+    }
+
+    nobr {
+        position: relative;
+        left: 90px;
+    }
+
+    .product-img-desktop {
+        display: none;
+    }
+
+    .product-img-mobile {
+        display: flex;
+        width: 375px;
+    }
+
+    .container {
+        width: 375px;
+        flex-direction: column;
+    }
+
+    .container .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    .shopping {
+        display: flex
+    }
+
+    .control {
+        position: absolute;
+        top: -67px;
+        bottom: 0px;
+        left: 215px;
+        right: 0px;
+        width: 165px;
+    }
+
+    .foot_article {
+        width: 375px;
+    }
+
+    .foot_article img:nth-child(1) {
+        width: 375px;
+    }
+
+    .foot_article img:nth-child(3) {
+        width: 375px;
+    }
+
+    .bottom-title {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+}

@@ -1,0 +1,10 @@
+let first_item = JSON.parse(localStorage.getItem("watched"))[0];
+      let second_item = JSON.parse(localStorage.getItem("watched"))[1];
+      let fisrt_이미지 = `https://codingapple1.github.io/shop/shoes${
+        first_item + 1
+      }.jpg`;
+      let second_이미지 = `https://codingapple1.github.io/shop/shoes${
+        second_item + 1
+      }.jpg`;
+
+      

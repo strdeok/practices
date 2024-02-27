@@ -1,3 +1,11 @@
+.main-bg {
+  height: 300px;
+  background-image: url('https://codingapple.com/wp-content/uploads/2022/04/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
 .App {
   text-align: center;
 }
@@ -7,43 +15,23 @@
   pointer-events: none;
 }
 
-.black-nav {
-  display: flex;
-  background-color: black;
-  width: 100%;
-  color: white;
-  padding-left: 20px;
+
+.start {
+  opacity: 0;
 }
 
-div {
-  box-sizing: border-box
+.end {
+  opacity: 1;
+  transition: all 0.5s;
 }
 
-.list {
-  padding-left: 20px;
-  text-align: left;
-  border-bottom: 1px solid gray;
-}
 
-span:hover {
+.products:hover {
+  border: solid 1px rgb(89, 89, 231);
   cursor: pointer;
 }
 
-.modal {
-  margin-top: 20px;
-  padding: 20px;
-  background: #eee;
-  text-align: left;
-}
 
-.ad {
-  background-color: gray;
-  height: 150px;
-}
-
-h4:hover {
-  cursor: pointer;
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -65,10 +53,12 @@ h4:hover {
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

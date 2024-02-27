@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "주방일기",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230318_219%2F1679108620472ROueW_JPEG%2FIMG_20230308_180948_074.jpg"
+  },
+
+  {
+    "id": 2,
+    "name": "호리",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_32%2F1698056209384PQ6PB_JPEG%2FIMG_4959.jpeg"
+  },
+
+  {
+    "id": 3,
+    "name": "이자카야잔",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200301_45%2F1583008153012lRYGu_JPEG%2F_R5lHQC4eZHoGZOIWsCZNb4y.jpeg.jpg"
+  },
+
+  {
+    "id": 4,
+    "name": "개미집 서면본점",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_260%2F1441010891799aTWpy_JPEG%2F12068144_0.jpg"
+  },
+
+  {
+    "id": 5,
+    "name": "을지로쎄시봉",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201015_28%2F1602771931649RxbPy_JPEG%2F_HJaxYcCxnnBrvrbTL9Fcejl.jpeg.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "매니멀스모크하우스",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEyMjBfMTYg%2FMDAxNzAzMDM3ODIwMzY4.u_53X9VJkThBK03N1ObFN6ayB3GK4D9aGMuLphjORG0g.A2__9RZ67ZuKgk7xFtdJcD5U6-jwvQoryFKEMPK5eYQg.JPEG%2F20231219_190521.jpg.jpg"
+  },
+  {
+    "id": 7,
+    "name": "하이볼 순",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_239%2F1693901191585R9nPN_JPEG%2F1000003979.jpg"
+  },
+
+  {
+    "id": 8,
+    "name": "야끼니꾸소량 합정본점",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210912_204%2F1631451351860zFCzV_JPEG%2F3_Wgb_WOSbXWCN62RYAUeZht.jpg"
+  },
+
+  {
+    "id": 9,
+    "name": "플레이그라운드브루어리 탭하우스",
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240215_129%2F17080055941497xjxb_JPEG%2F%25C5%25A9%25B1%25E2%25BA%25AF%25C8%25AFDSC05978.jpg"
+  }
+]
