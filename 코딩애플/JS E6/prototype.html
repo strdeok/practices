@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(name,age) {
+        this.name = name;
+        this.age = age;
+        this.sayHi = function () {
+          console.log(`안녕하세요 ${this.name}입니다`);
+        };
+      }
+
+      Student.prototype.gender = "남성"
+
+      var 학생1 = new Student('kim',15);
+      var 학생2 = new Student('park',16);
+
+      console.log(Student.prototype)
+    // prototype은 유전자. prototype에 값을 추가하면 모든 자식들이 물려받기 가능
+    // prototype 동작 원리: 1. 학생이 직접 gender를 갖고 있나? -> 2. 학생1의 부모 유전자가 gender를 갖고 있나? -> go
+
+    var arr = [1,2,3] //우리가 만드는 array
+    var arr = new Array(1,2,3) // 컴퓨터가 받아들이는 방식
+    // JS 내장함수를 쓰는 것도 prototype의 특성을 활용한 방식이다
+    
+    </script>
+</body>
+</html>

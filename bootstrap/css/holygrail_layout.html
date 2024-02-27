@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            border: 1px solid gray;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        header {
+            border: 1px solid gray;
+            padding-left: 25px;
+        }
+
+        footer {
+            border-top: 1px solid gray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content nav {
+            border-right: 1px solid gray;
+        }
+
+        .content aside {
+            border-left: 1px solid gray;
+        }
+
+        nav,
+        aside {
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+
+        nav{
+            order:-1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>헤드</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>css</li>
+                    <li>html</li>
+                    <li>javascript</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nostrum alias est voluptatum quam
+                pariatur, porro maxime animi facilis repellat quae sunt ad? Molestiae delectus unde, tempora ad quod
+                fuga ea perferendis itaque totam, libero vitae quos magnam provident. Doloribus ipsam alias recusandae
+                sapiente quas quod facere nisi voluptatibus voluptate! Quos excepturi repellat odio error blanditiis
+                temporibus, omnis fuga voluptate repudiandae, id asperiores repellendus dolor vitae amet eveniet minima
+                consequatur iusto perferendis exercitationem, deserunt ut. Dolore fugit cupiditate hic facilis omnis
+                cumque odio magni beatae velit. Fugiat est, corporis necessitatibus dolorum repellat consectetur
+                expedita nobis nihil recusandae tempora eos temporibus.
+            </main>
+            <aside>
+                광고
+            </aside>
+        </section>
+        <footer>
+            <h1>헤드에 대한 주소</h1>
+        </footer>
+    </div>
+</body>
+
+</html>

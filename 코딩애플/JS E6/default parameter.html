@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function 함수() {
+        return 20;
+      }
+      function 더하기(a, b = 함수() * a) {
+        // b는 default parameter. 연산자 가능. 함수도 가능
+        console.log(a + b);
+      }
+
+      더하기(3);
+
+      function 함수2(a, b, c) {
+        console.log(arguments); // arrray처럼 출력됨
+        for (let i =0; i<arguments.length; i++){
+            console.log(arguments[i])
+        }
+      }
+
+      함수2(1, 2, 3);
+    </script>
+  </body>
+</html>

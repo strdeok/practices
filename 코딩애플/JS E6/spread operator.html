@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var array = ["hello", "world"];
+      console.log(array);
+      console.log(...array);
+      // 대괄호 제거해줌
+
+      var 문자 = "hello";
+      console.log(...문자); // 문자도 해체해줌
+
+      var a = [1, 2, 3];
+      var b = [4, 5];
+      var c = [...a, ...b];
+      // array를 합치는 것도 가능
+      console.log(c);
+
+
+
+
+
+      var d = [...a]; // 이렇게 하면 값을 공유하지 않음
+      a[3] = 4;
+      console.log(a);
+      console.log(d);
+
+      var o1 = { a: 1, b: 2 };
+      var o2 = { a: 2, ...o1 }; // 중복이 일어나면 가장 뒤에 있는 것을 적용
+      console.log(o2);
+
+
+
+
+
+
+      function 더하기(a, b, c) {
+        console.log(a + b + c);
+      }
+      더하기(...[10,20,30])
+
+      
+
+
+    //   apply 함수
+    var person = {
+        인사: function(){
+            console.log(this.name + '안녕')
+        }
+    }
+
+    var person2 = {
+        name: '손흥민'
+    }
+
+    person.인사.apply(person2, [1,2]) 
+    person.인사.call(person2 ,1,2)
+    // apply와 call은 같지만 apply는 파라미터를 array 형태로 넣기 가능
+    </script>
+  </body>
+</html>

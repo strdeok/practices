@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <script>
+      var 이름 = "황덕";
+      function a() {
+        var 이름 = "김철수";
+        console.log(이름);
+      }
+      console.log(이름);
+      // 함수 안에서 변수 만들면 함수 안에서만 사용가능
+
+      let 과일 = "포도";
+      과일 = "사과";
+      // let은 재선언X, 재할당 O
+
+      const 나라 = "대한민국";
+      나라 = "영국";
+      // const는 재선언X, 재할당 O
+      // let, const는 범위가 중괄호 이내
+    </script>
+    <script>
+      var 나이 = "23";
+      const 출신 = "서울";
+
+      var 예금액 = 60000;
+      var 미래예금액 = 0;
+
+      if (예금액 < 50000) {
+        미래예금액 = 예금액 * 1.15 * 1.15;
+      } else {
+        미래예금액 = 예금액 * 1.2 * 1.2;
+      }
+      console.log(미래예금액);
+
+      var first = 360;
+      var total = 0;
+      function drink() {
+        total = first + (first * 2) / 3 + (((first * 2) / 3) * 2) / 3;
+        console.log(total);
+      }
+      drink();
+
+      
+    </script>
+  </body>
+</html>

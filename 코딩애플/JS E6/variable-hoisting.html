@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(나이); // 에러가 안뜨는 이유는 hoisting 현상이 일어나기 때문
+      var 나이 = 30;
+      console.log(나이);
+      // 라 쓰면
+
+      // var 나이;
+      // 나이 = 30;
+      // 변수 hoisting 현상: 변수 선언을 변서 범위 맨 위로 끌고오는 현상 (함수도 똑같음)
+
+      var 이름, 성별; // 한번에 변수 선언 가능
+      이름 = '황'
+      성별 = '남자'
+
+      window.커피 = "아아"; // 전역변수 만들기
+
+      if (true){
+        let a = 1;
+        var b = 2;
+        if(true){
+            let b = 3;
+        }
+        console.log(b); // 2
+      }
+    </script>
+  </body>
+</html>

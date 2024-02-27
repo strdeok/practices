@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 이름을 찾아주는 함수
+      var 출석부 = ["흥민", "영희", "철수", "재석", "재석"];
+
+      function 이름찾기(a) {
+        for (let i = 0; i < 출석부.length; i++) {
+          if (출석부[i] == a) {
+            return console.log("있어요");
+          }
+        }
+      }
+
+      //   구구단 출력
+      var 구구단 = [2, 3, 4, 5, 6, 7, 8, 9];
+      for (let i = 0; i < 9; i++) {
+        for (let k = 1; k < 10; k++)  {
+          console.log(구구단[i] * k);
+        }
+      }
+
+      var s = [1, 2, 3, 4, 5];
+      let sum = 0;
+
+      // 평균점수 계산기
+      function 평균계산(arr,b){
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        var average = sum/arr.length
+        if ( average < b){
+            console.log('평균보다' + (b-average)+'점 올랐다');
+        } else {
+            console.log ('평균보다' + (average-b)+'점 내려갔다')
+        }
+    }
+평균계산([40, 40, 40], 20) 
+    </script>
+  </body>
+</html>

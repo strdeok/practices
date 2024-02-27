@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var grades = {
+        'list': { 'egoing': 10, 'k8805': 6, 'sorialgi': 80 },
+        // list는 객체
+        'show': function () {
+            // show는 함수
+          for (var name in this.list) {
+            // this는 함수가 소속되어 있는 객체를 가리킴(여기선 grades)
+            document.write(name + ":" + this.list[name] + "<br />");
+          }
+        },
+      };
+      grades.show();
+    //   show 안에 있는 함수를 호출
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(name) {
+        this.name = name;
+        this.introduce = function () {
+          return "My name is " + this.name;
+        };
+      }
+      var p1 = new Person("egoing");
+    //   생성자 함수는 일반 함수와 구분하기 위해 첫글자를 대문자로 표시
+      document.write(p1.introduce() + "<br />");
+
+      var p2 = new Person("leezche");
+      document.write(p2.introduce());
+    //   생성자 내에서 이 객체의 프로퍼티를 정의하는 것을 초기화라고 함. 이로 인해 코드의 재 사용성이 높아짐.
+    </script>
+  </body>
+</html>

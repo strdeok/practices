@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100%;
+      }
+
+      .slide-container {
+        width: 300vw;
+        transition: all 1s;
+      }
+
+      .slide-box {
+        width: 100vw;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="overflow: hidden">
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="/새 폴더/디즈니컴퓨터배경화면02.jpg" />
+        </div>
+        <div class="slide-box">
+          <img src="/새 폴더/디즈니컴퓨터배경화면03.jpg" />
+        </div>
+        <div class="slide-box">
+          <img src="/새 폴더/디즈니컴퓨터배경화면04.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <button class="1">1</button>
+    <button class="2">2</button>
+    <button class="3">3</button>
+    <button class="back">이전</button>
+    <button class="next">다음</button>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // 목차 눌렀을때 반응
+      let now = 0;
+      $(".1").on("click", function () {
+        $(".slide-container").css("transform", "translateX(0vw)");
+        now = 0;
+        console.log(now);
+      });
+
+      $(".2").on("click", function () {
+        $(".slide-container").css("transform", "translateX(-100vw)");
+        now = 1;
+        console.log(now);
+      });
+
+      $(".3").on("click", function () {
+        $(".slide-container").css("transform", "translateX(-200vw)");
+        now = 2;
+        console.log(now);
+      });
+
+      // 이전 다음 버튼 구현
+      $(".next").on("click", function () {
+        if (now == 2) {
+          now = -1;
+        }
+        now++;
+        console.log(now);
+        $(".slide-container").css("transform", "translateX(-" + now + "00vw)");
+      });
+
+      $(".back").on("click", function () {
+        if (now == 0) {
+          now = 3;
+        }
+        now--;
+        console.log(now);
+        $(".slide-container").css("transform", "translateX(-" + now + "00vw)");
+      });
+    </script>
+  </body>
+</html>

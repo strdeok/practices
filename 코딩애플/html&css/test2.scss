@@ -1,0 +1,12 @@
+@mixin some($hole){
+    font-size: $hole;
+    letter-spacing: 10px;
+}
+
+h2 {
+    @include some(30px)
+}
+
+h3 {
+    @include some(16px)
+}

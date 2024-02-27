@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 이름 = "kim";
+      //  선언 /  할당
+      var 이름 = "lee";
+      // 재선언
+      이름 = "park";
+      // 재할당
+
+      // var: 재선언 O, 재할당 O, function 범위
+
+      let 나이 = 20;
+      // let: 재선언 X, 재할당 O, {} 범위
+
+      const 성별 = "남자";
+      // 재선언 X, 재할당 X, {} 범위
+
+      const 사람 = {
+        이름: "Jeong"
+      }
+      사람.이름 = "Lim" // object 내부 값 변경은 오류 X
+
+    Object.freeze(사람); // 수정 불가
+    사람.이름 = "Hwang"
+
+    </script>
+  </body>
+</html>

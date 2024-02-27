@@ -1,0 +1,28 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #2a4cb2;
+  font-size: 16px;
+}
+
+.box div {
+  margin: auto;
+}
+
+.div_red, .div_blue, .div_green {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.div_green {
+  background-color: green;
+}
+
+.div_blue {
+  background-color: blue;
+}
+
+.div_red {
+  background-color: red;
+}/*# sourceMappingURL=test.css.map */

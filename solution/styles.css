@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+  }
+  
+  body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+  }
+  
+  /* .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(228, 12%, 48%);
+  }
+  .attribution a {
+    color: hsl(158, 36%, 37%);
+    text-decoration: none;
+  } */
+  
+  .card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 92vw;
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  img#desktop {
+    display: none;
+  }
+  
+  img#mobile {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    align-content: space-around;
+  }
+  
+  h1 {
+    font-family: "Fraunces";
+    line-height: 31px;
+    color: hsl(212, 21%, 14%);
+  }
+  
+  h2 {
+    font-weight: ;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 6px;
+    font-size: 12px;
+    padding: 20px 0 15px 0;
+  }
+  
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: hsl(228, 12%, 48%);
+  }
+  
+  #text {
+    padding: 18px 0 25px 0;
+  }
+  
+  .price {
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+  }
+  
+  #sale-cost {
+    font-family: "Fraunces";
+    color: hsl(158, 36%, 37%);
+    font-size: 32px;
+    padding-right: 20px;
+  }
+  
+  #cost {
+    text-decoration: line-through;
+    font-size: 12px;
+  }
+  
+  button {
+    display: flex;
+    margin: 0 auto 25px auto;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  
+  #cart-logo {
+    height: 14px;
+  }
+  
+  button:active {
+    background-color: #1a4131;
+  }
+  
+  /* Media query to change design for desktop screen */
+  
+  @media screen and (min-width: 1440px) {
+    img#mobile {
+      display: none;
+    }
+  
+    .card {
+      flex-direction: row;
+      min-width: 680px;
+      max-height: 510px;
+    }
+  
+    img#desktop {
+      display: block;
+      width: 340px;
+      border-radius: 10px 0 0 10px;
+    }
+  
+    .info {
+      padding: 20px 35px;
+    }
+  
+    h1 {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  
+    h2 {
+      padding-bottom: 25px;
+      font-size: 16px;
+    }
+  
+    p {
+      line-height: 26px;
+    }
+  
+    #text {
+      padding: 35px 0;
+      font-size: 16px;
+    }
+  
+    .price {
+      padding-bottom: 35px;
+    }
+  
+    #sale-cost {
+      font-size: 36px;
+    }
+  
+    #cost {
+      font-size: 16px;
+    }
+  
+    button {
+      border-radius: 8px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+  }

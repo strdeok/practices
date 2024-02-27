@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function func() {
+        if (window === this) {
+          document.write("window === this</br>");
+        }
+      }
+      func(); // window === this
+      //   this는 전역객체인 window와 같다
+
+      var o = {
+        func: function () {
+          if (o === this) {
+            document.write("o === this</br>");
+          }
+        },
+      };
+      o.func(); // o === this
+      // 객체의 소속인 메소드의 this는 그 그 객체를 가르킨다
+
+      var funcThis = null;
+
+      function Func() {
+        funcThis = this;
+      }
+      var o1 = Func();
+      if (funcThis === window) {
+        document.write("window <br />");
+      } // true
+
+      var o2 = new Func();
+      if (funcThis === o2) {
+        document.write("o2 <br />");
+      } //true
+      //   생성자는 빈 객체를 만든다. 그리고 이 객체내에서 this는 만들어진 객체를 가르킨다.
+
+      var o = {};
+      var p = {};
+      function func() {
+        switch (this) {
+            // swich는 ()안에 있는 값이 같은 case 안에 있는 구간이 실행된다
+          case o:
+            document.write("o<br />");
+            break;
+          case p:
+            document.write("p<br />");
+            break;
+          case window:
+            document.write("window<br />");
+            break;
+        }
+      }
+      func(); // window
+      func.apply(o); // o
+      func.apply(p); // p
+    </script>
+  </body>
+</html>

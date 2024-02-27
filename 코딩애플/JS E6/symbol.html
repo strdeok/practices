@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 심볼 = Symbol("설명");
+      // object의 비밀스런 키값
+
+      var weight = Symbol("여자에게 몸무게는 비밀이다");
+      var height = Symbol("난쟁이라 부끄러워");
+      var 식사량 = Symbol("코끼리밥")
+
+      var person = { name: "kim", 
+      [식사량]: "5끼" // 이렇게도 추가 가능
+    };
+      person[weight] = 100; // 이런 민감한 정보를 숨길 수 있게 가능
+      person[height] = "160cm";
+
+      for (var key in person) {
+        console.log(person[key]);
+      }
+
+
+
+    var a = Symbol('설명1')
+    var b = Symbol('설명1')
+    // a == b. false (설명은 Symbol을 구분하지 않음)
+
+    var c = Symbol.for('설명2') // 전역심볼이 됨
+    var d = Symbol.for('설명2')
+    // a === b. true
+
+
+    </script>
+  </body>
+</html>

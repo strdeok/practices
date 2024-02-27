@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class grandparent {
+            constructor(name,gender){
+                this.lastname = "kim"
+                this.name = name;
+                this.gender = gender
+            }
+            sayHi(){
+                console.log('안녕 저는 할아버지')
+            }
+        }
+
+        var grandparent1 = new grandparent('sangdeok');
+        class parent extends grandparent {
+            constructor(name,gender){
+                super(name,gender); // 'extends로 상속중인 부모의 connstructor를 의미한다'고 말해주는 함수
+                this.age = 50; // extends로 만든 class는 this는 혼자 쓰기 어려움
+            }
+            sayHi(){
+                console.log('안녕 저는 아버지')
+                super.sayHi(); // 부모의 prototype에 있는걸 출력
+            }
+        }
+
+        var parent1 = new parent('jongpil','male')
+    </script>
+</body>
+</html>

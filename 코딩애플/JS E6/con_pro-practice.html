@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 0.
+      function con(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sayHi = function () {
+          console.log(`안녕 나는 ${this.name}이야`);
+        };
+      }
+
+      var 학생1 = new con("kim", 20);
+      var 학생2 = new con("park", 21);
+      var 학생3 = new con("lee", 22);
+
+      // 1.
+      function Parent() {
+        this.name = "Kim";
+      }
+      var a = new Parent();
+
+      a.__proto__.name = "Park";
+      console.log(a.name); // kim. 자기꺼 먼저 찾기 때문
+
+      // 2.
+      function Student(이름, 나이) {
+        this.name = 이름;
+        this.age = 나이;
+      }
+
+      Student.prototype.sayHi = () => {
+        console.log("안녕 나는 " + this.name + "이야");
+      };
+      var 학생1 = new Student("Kim", 20);
+
+      학생1.sayHi(); // arrow function 써서 안됨. 일반적인 function 해주면 해결
+
+      // 3.
+      var arr = [1, 2, 3];
+
+      Array.prototype.remove3 = function () {
+        if (this.includes(3)) {
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === 3) {
+              arr.splice(i, 1);
+            }
+          }
+        }
+      };
+
+      arr.remove3();
+
+      console.log(arr); //[1,2]
+    </script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("images/bg-intro-mobile.png");
+    background-repeat: no-repeat;
+    background-color: hsl(0, 100%, 74%);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 auto;
+    width: 375px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#title {
+    color: white;
+    font-weight: 600;
+    font-size: 27px;
+    margin: 91px 51px 18px;
+}
+
+#article {
+    color: white;
+    margin: 0px 30px;
+}
+#formpart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 86%;
+}
+#bluebox {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border: solid hsl(248, 32%, 49%);
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    margin-top: 70px;
+    width: 100%;
+    height: 80px;
+    color: white;
+    box-shadow: 0 8px 0 0 hsl(249, 10%, 26%, 0.3);
+}
+
+span {
+    font-weight: 600;
+}
+
+#try {
+    margin: 0 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: solid white;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 8px 0 0 hsl(249, 10%, 26%, 0.3);
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+#inputs {
+    margin-top: 10px;
+    text-align: center;
+}
+
+input {
+    border: solid 1px hsl(246, 25%, 77%);
+    border-radius: 5px;
+    width: 80%;
+    margin: 8px;
+    height: 55px;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    font-weight: 700;
+}
+.error{
+    background-image: url("images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 240px 17px;
+    border: solid 2px hsl(0, 100%, 74%);
+}
+
+#button {
+    width: 86%;
+    height: 53px;
+    background-color: hsl(154, 59%, 51%);
+    border: hidden;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-left: 0px;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 0 0 hsl(154, 59%, 41%);
+}
+#button:hover {
+    cursor: pointer;
+    background-color:hsl(154, 59%, 51%, 0.5);
+    
+}
+i {
+    display: none;
+    position: relative;
+    left: 70px;
+    bottom: 10px;
+    color: hsl(0, 100%, 74%);
+    font-size: 5px;
+}
+
+#foot {
+    width: 75%;
+    font-size: 11px;
+    color: hsl(246, 25%, 77%);
+    margin: 10px auto;
+}
+
+#foot_1 {
+    color: hsl(0, 100%, 74%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (min-width: 1440px) {
+    body{
+        background-image: url("images/bg-intro-desktop.png");
+    }
+    main {
+        height: 100vh;
+       width: 1120px;
+       flex-direction: row;
+       align-items: center;
+    }
+    #textpart{
+        text-align: left;
+    }
+    #title {
+        font-size: 50px;
+        margin: 0 0 30px 0;
+        line-height: 50px;
+    }
+    
+    #article {
+        width: 500px;
+        color: white;
+        margin: 0;
+    }
+    #formpart {
+        height: 100vh;
+    }
+    #bluebox {
+        margin-top: 107px;
+        margin-left: 70px;
+        width: 86.5%;
+        height: 55px;
+    }
+    #try {
+        margin: 0 auto;
+    }
+    form {
+        width: 86%;
+        margin-left: 70px;
+        margin-top: 25px;
+        padding-bottom: 40px;
+    }
+    #inputs {
+        position: relative;
+        top: 15px;
+        margin-top: 15px;
+    }
+    input:not(#button){
+        background-position: 380px 17px;
+    }
+    i {
+        left: 140px;
+    }
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+    }
+}

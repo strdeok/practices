@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 변수 = "1234";
+      // primitive data type
+      var array = [1, 2, 3];
+      var obj = {name : 'kim'}
+      // reference data type
+
+    var 이름1 = {name : '김'}
+    var 이름2 = 이름1
+    이름1.name = '박'
+
+    console.log(이름1) // 박
+    console.log(이름2) // 박
+    // reference data는 복사하는 특성이 있음
+
+    var 이름3 = {name : '김'}
+    var 이름4 = {name : '김'}
+    이름3 == 이름4 // false. 서로 다른 화살표를 갖고 있다고 생각하면 됨
+    이름3.name == 이름4.name // true
+
+    function 변경(obj){
+        obj = {name : 'park'} // 재할당이 안됨. 파라미터는 변수생성&할당과 같음.
+    // obj라는 변수에 새로운 화살표를 재할당한 거지 이름1이라는 변수는 건드리지 않았다
+    }
+    변경(이름1)
+    
+
+    </script>
+  </body>
+</html>

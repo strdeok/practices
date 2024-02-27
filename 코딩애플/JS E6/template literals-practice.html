@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 순서바꾸기
+      var pants = 20;
+      var socks = 100;
+      function 해체분석기(a, b, c) {
+        console.log(a[1] + b + a[0] + c);
+      }
+      해체분석기`바지${pants} 양말${socks}`;
+
+      // 2. 바지가 0이면 다 팔렸어요
+      function 해체분석기2(a, b, c) {
+        if (b == 0) {
+          b = "다팔렸어요";
+        }
+        console.log(a[0] + b + a[1] + c);
+      }
+      해체분석기2`바지${pants} 양말${socks}`;
+    </script>
+  </body>
+</html>

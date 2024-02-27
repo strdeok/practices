@@ -1,0 +1,89 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 auto;
+    width: 375px;
+    font-size: 16px;
+}
+
+form {
+    margin: 20px;
+}
+
+#mob_default {
+    /* display: none; */
+}
+
+#success_page {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px;
+    margin: 100px 0px;
+}
+
+#close_btn {
+    /* position */
+    width: 90%;
+    position: relative;
+    margin-top: 90%;
+    /* shape */
+    background-color: hsl(235, 18%, 26%);
+    color: white;
+    padding: 18px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 400;
+}
+
+#img_desktop {
+    display:none;
+}
+
+
+
+.main-part > div {
+    display: flex;
+}
+
+.main-part > div > p {
+    margin-left: 10px;
+}
+
+#email {
+    margin-top: 30px;
+    color: hsl(235, 18%, 26%);
+    font-weight: 600;
+}
+
+input {
+    margin-top: 10px;
+    padding: 15px 10px;
+    border: solid hsl(231, 7%, 60%) 1px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+input ::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+
+#ad {
+    width: 95%;
+    border: solid hsl(235, 18%, 26%) 1px;
+    border-radius: 5px;
+    background-color: hsl(235, 18%, 26%);
+    padding: 15px 10px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}

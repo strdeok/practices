@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      .black-bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        padding: 30px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+      }
+      .white-bg {
+        background: white;
+        border-radius: 5px;
+        padding: 30px;
+      }
+      .show {
+        visibility: visible;
+        opacity: 1;
+      }
+      .hide {
+        display: none;
+      }
+
+      .sub {
+        position: absolute;
+        top: 30px;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        /* height: 80%; */
+        height: 0%;
+        width: 100%;
+        transition: all 1s
+        ;
+      }
+
+      .show_sub {
+        height: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="log_in">로그인</button>
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <button class="btn btn-danger" id="close">닫기</button>
+      </div>
+    </div>
+
+    <ul class="list-group" style="width: 500px; position: relative;">
+      <li class="list-group-item" style="z-index: 2;"><button class="sub_menu_btn">버튼임</button></li>
+      <div class="list-group-item sub">서브메뉴</div>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">A fourth item</li>
+      <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".log_in").on("click", function () {
+        $(".black-bg").addClass("show");
+      });
+
+      $(".btn").on("click", function () {
+        $(".black-bg").addClass("hide");
+      });
+
+      $(".sub_menu_btn").on("click", function(){
+        $(".sub").toggleClass("show_sub");
+      })
+
+    </script>
+  </body>
+</html>

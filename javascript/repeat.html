@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // while(true) {
+        //     document.write('code for everyone <br/>')
+        // }  // 무한 츠쿠요미마냥 계속 생성되니 웹이 튕김
+
+        // var i=0;
+        // while (i<10){
+        //     document.write(i+"Newjeans <br/>")
+        //     i = i + 1;
+        // } 
+        //조건이 붙어서 반복의 한계가 생김
+
+        // for (var i=0; i<10; i=i+1){
+        //     document.write(i + 'newjeans <br/>')
+        // }
+        // for(초기화; 반복조건; 반복될때마다 실행되는 코드 순서) 훨씬 더 가독성이 좋아짐
+
+        // for(var i = 0; i < 10; i++){
+        //     if(i==5){
+        //         break;
+        //     }
+        //     document.write(i+'Newjeans <br/>');
+        // }
+        // break는 반복문을 중단시키는 언어.
+
+        // for(var i = 0; i < 10; i++){
+        //     if(i==5){
+        //         continue;
+        //     }
+        //     document.write(i+'Newjeans <br/>');
+        // }
+        // continue는 실행을 중단시키면서 다시 반복함. 그렇기때문에 5가 생략됐다.
+
+        for(var i = 0; i < 10; i++){
+            for(var j = 0; j < 10; j++){    
+                document.write(String(i)+String(j)+'newjeans<br />');}
+    }
+    // String은 문자열로 바꿔준다.
+    </script>
+</body>
+</html>

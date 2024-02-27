@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <custom-input name="비번"></custom-input>
+    <script>
+      class 클래스 extends HTMLElement {
+        connectedCallback() {
+          let name = this.getAttribute("name");
+          this.innerHTML = `<label>하이염 ${name}치는 곳임</label><input>`;
+        }
+        static get observedAttributes(){
+            return ['name']
+        } // name 이라는 attribute 바뀌는지 감시
+        attributeChangedCallback(){
+            console.log(this.getAttribute("name"))
+        } // 바뀌면 실행하는 것
+      }
+      customElements.define("custom-input", 클래스);
+    </script>
+  </body>
+</html>

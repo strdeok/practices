@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function factory_movie(title) {
+        return {
+          get_title: function () {
+            return title;
+          },
+          set_title: function (_title) {
+            if(typeof _title === 'string'){
+            title = _title;} else{
+                alert('제목은 문자열이어야 합니다.');
+            }
+          },
+        };
+      }
+      ghost = factory_movie("Ghost in the shell");
+      matrix = factory_movie("Matrix");
+
+      alert(ghost.get_title());
+      alert(matrix.get_title());
+// 외부함수가 실행될 때 마다 새로운 지역변수를 포함하는 클로저가 생성되기 때문에 ghost와 matrix는 서로 다른 독립된 개체가 됨
+      ghost.set_title("공각기동대");
+//  factory_movie의 지역변수 title은 get_title에서 정의된 객체의 메소드에서만 접근 할 수 있는 값이다
+      alert(ghost.get_title());
+      alert(matrix.get_title());
+    </script>
+  </body>
+</html>

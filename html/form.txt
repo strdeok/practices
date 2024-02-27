@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form action="http://localhost/order.php">
+			
+		</form>
+		<h1>
+			색상 단일선택
+		</h1>
+		<p>
+		붉은색 : <input type="radio" name="color">
+		검은색 : <input type="radio" name="color">
+		파란색 : <input type="radio" name="color">
+		</p>
+
+		<h1>사이즈 다중선택</h1>
+		<p>
+
+		95 : <input type="checkbox" name="size" value="95">
+		100 : <input type="checkbox" name="size" value="100">
+		105 : <input type="checkbox" name="size" value="105">
+		</p>
+		<input type="submit">
+		
+	</body>
+</html>

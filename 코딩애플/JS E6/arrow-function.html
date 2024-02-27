@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="버튼">버튼</button>
+    <script>
+      var 함수 = (a) => a + 10;
+      //   arrow function 장점
+      // 1: 입출력 전용
+      // 2: 파라미터 1개면 소괄호 생략, 코드 한줄이면 중괄호도 생략가능
+
+      [1, 2, 3, 4, 5].forEach(a => console.log(a));
+
+      document.getElementById('버튼').addEventListener('click',
+      (e)=>{
+        console.log(e.currentTarget);
+        // this는 불가. 바깥에 있던 this를 쓰기 때문
+      });
+
+      var 오브젝트 = {
+        함수: ()=>{
+            
+        }
+      }
+    </script>
+  </body>
+</html>

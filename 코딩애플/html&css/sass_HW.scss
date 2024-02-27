@@ -1,0 +1,66 @@
+.HW1 {
+    ul{
+      width: 300px;
+      padding: 10px;
+      margin: 0px;
+      border: solid 1px black;  
+    }
+    ul {
+        &:hover {
+          background-color:royalblue;
+          color: white;
+        }
+}
+}
+
+@mixin basic-box(){
+    width: 500px;
+    height: 50px;
+    padding: 5px;
+    margin: 20px;
+    background-color: bisque;
+}
+
+.alert-box-green {
+    @include basic-box();
+    background-color: hsl(99, 33%, 83%);
+    color: hsl(120, 81%, 29%)
+}
+
+.alert-box-blue {
+    @include basic-box();
+    background-color: hsl(205, 33%, 83%);
+    color: hsl(202, 81%, 29%)
+}
+
+.alert-box-yellow {
+    @include basic-box();
+    background-color: hsl(52, 33%, 83%);
+    color: hsl(57, 81%, 29%)
+}
+
+.HW3 {
+    width: 500px;
+}
+
+.HW3 div>div {
+    border: solid 1px black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column($width){
+    width: $width;
+    text-align: center;
+}
+
+.col-6 {
+    @include column(50%);
+}
+
+.col-4 {
+    @include column(33.33333333%);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // function a(arg) -> arg는 매개변수 parameter
+        // a(1) ->1은 인자
+      function sum() {
+        var _sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            // arguments는 사용자가 전달한 인자를 갖고 있음
+          document.write(i + " : " + arguments[i] + "<br />");
+          _sum += arguments[i];
+        //   _sum += arguments[i] / _sum=_sum+arguments[i]
+        }
+        return _sum;
+      }
+      document.write("result : " + sum(1, 2, 3, 4));
+    </script>
+  </body>
+</html>

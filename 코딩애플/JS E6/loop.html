@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var Object = { name: "kim", age: 30 };
+      var Array = [2,3,4,5,6]
+
+    //   class 부모 {}
+    //   부모.prototype.name = "park";
+    //    Object = new 부모();
+
+      for (let i = 0; i < 3; i++) {
+        // 일반적인 반복문
+        console.log(i);
+      }
+
+      [1, 2, 3].forEach((element) => {
+        console.log(element);
+      }); // array전용 반복문
+
+      for (var key in Object) {
+        // Object전용 반복문.
+        // 1. enumerable(셀 수 있는) 한 것만 반복문 사용가능
+        // 2. 부모의 prototype에 저장된 것도 출력
+
+        // if (Object.hasOwnProperty(key)) {
+        //   console.log(Object[key]);
+        // } //내가 가진것만 출력하고 싶으면 일케하셈
+        console.log(Object[key]);
+      }
+
+      for (var 자료 of Array) {
+        // Array, 문자, argumets, NodeList, Map, Set 에 쓰임
+        // iterable()전용 반복문
+
+        console.log(자료)
+      }
+    </script>
+
+    <script>
+      // 1. for of 반복문을 이용해서 2단부터 9단까지의 구구단을 콘솔창에 한번 출력
+      //   let 데이터 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      //   for (let i = 2; i < 10; i++) {
+      //     for (var k of 데이터) {
+      //       console.log(`${i} X ${k} = ${k * i}`);
+      //     }
+      //   }
+
+      // 2.
+      var products = [
+        {
+          name1: "chair",
+          price1: 7000,
+        },
+        {
+          name2: "sofa",
+          price: 5000,
+        },
+        {
+          name1: "desk",
+          price3: 9000,
+        },
+      ];
+
+      let newValue;
+      let newKey;
+
+      for (let item of products) {
+        for (let key in item) {
+          //마지막글자를 숫자로변환했을 때 NaN이 안나오면 (숫자면)
+          if (isNaN(parseInt(key.slice(-1))) == false) {
+            newValue = item[key];
+            newKey = key.slice(0, -1);
+            item[newKey] = newValue;
+            delete item[key];
+          }
+        }
+      }
+
+      console.log(products);
+    </script>
+  </body>
+</html>

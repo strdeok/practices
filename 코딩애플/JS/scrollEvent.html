@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+      }
+      .navbar-brand {
+        font-size: 30px;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span id="change" class="navbar-brand"> JSShop </span>
+        <span class="ms-auto mx-3 badge bg-dark">Dark</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div
+      id="lorem"
+      class="lorem"
+      style="
+        position: relative;
+        top: 100px;
+        left: 100px;
+        width: 200px;
+        height: 100px;
+        overflow-y: scroll;
+      "
+    >
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quam
+      atque, vel, voluptate minima libero expedita voluptates aspernatur
+      repudiandae optio, accusantium aut. Dolorum, deserunt nam at numquam
+      repellat fuga distinctio!
+    </div>
+    <div style="height: 1000px"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      /**스크롤 내리면 글자가 작아짐**/
+      window.addEventListener("scroll", function () {
+        if (window.scrollY >= 100) {
+          document.getElementById("change").style.fontSize = "10px";
+        } else {
+          document.getElementById("change").style.fontSize = "30px";
+        }
+        console.log(window.scrollY);
+      });
+
+      /**박스 끝까지 스크롤시 알림**/
+      document.getElementById("lorem").addEventListener("scroll", function () {
+        var 스크롤양 = document.getElementById("lorem").scrollTop;
+        var 박스높이 = document.getElementById("lorem").scrollHeight;
+        var 화면상높이 = document.getElementById("lorem").clientHeight;
+        if (스크롤양 + 화면상높이 == 박스높이) {
+          alert("잘해따");
+        }
+      });
+    </script>
+  </body>
+</html>

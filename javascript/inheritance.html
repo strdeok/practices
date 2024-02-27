@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name){
+            this.name = name;
+        }
+        Person.prototype.name = null;
+        Person.prototype.introduce = function(){
+            return 'my name is' + this.name;
+        }
+        function Programmer(name){
+            this.name = name;
+        }
+        // programmer 라는 생성자를 만들고
+        Programmer.prototype = new Person();
+        // programmer의 prototype과 person의 객체를 연결했더니 programmer도 introduce를 사용할 수 있게 됨. 이게 상속
+        var p1 = new Programmer('deok');
+        document.write(p1.introduce()+"</br>")
+    </script>
+</body>
+</html>

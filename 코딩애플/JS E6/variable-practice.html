@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="display: none">모달창0</div>
+    <div style="display: none">모달창1</div>
+    <div style="display: none">모달창2</div>
+    <button>버튼0</button>
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <script>
+        // 1.
+        함수1();
+        function 함수1() {
+          console.log(안녕);
+          let 안녕 = "Hello!";
+        } // error. let은 unidentified가 할당되지 않아 error를 도출함
+
+        // 2.
+        함수2();
+        var 함수2 = function () {
+          console.log(안녕);
+          var 안녕 = "Hello!";
+        }; // error. 함수가 아니라 뜸
+
+        // 3.
+        let a = 1;
+        var 함수 = function () {
+          a = 2;
+        };
+        console.log(a); // 1
+
+        // 4.
+        let c = 1;
+        var d = 2;
+        window.c = 3;
+        window.d = 4;
+
+        console.log(c + d); // c = 1(범위가 더 작은걸 사용), d = 4
+
+        // 5. 왜 안되는지 설명 & 해결
+        for (let i = 1; i < 6; i++) {
+          setTimeout(function () {
+            console.log(i);
+          }, i * 1000);
+        } // var -> let. 반복문과 timeout이 동시에 실행되지 않음. console.log를 실행하기 위해 '전역변수 i'는 6만 남게 됨
+          // 그래서 let으로 바꾸면 i값이 'for 반복문 내'에 남아있어 1,2,3,4,5가 나옴
+
+      // 6. 해결, 설명
+      var 버튼들 = document.querySelectorAll("button");
+      var 모달창들 = document.querySelectorAll("div");
+
+      for (let i = 0; i < 3; i++) {
+        버튼들[i].addEventListener("click", function () {
+          모달창들[i].style.display = "block"
+        });
+      }
+    </script>
+  </body>
+</html>

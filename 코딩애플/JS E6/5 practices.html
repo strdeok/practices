@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.
+      class 강아지 {
+        constructor(종, 색깔) {
+          this.type = 종;
+          this.color = 색깔;
+        }
+        한살먹기 = function () {
+          console.log("개는 포함안시킬건데용??");
+        };
+      }
+
+      var 강아지1 = new 강아지("말티즈", "white");
+      var 강아지2 = new 강아지("진돗개", "brown");
+
+      // 2.
+      class 고양이 extends 강아지 {
+        constructor(종, 색깔, 나이) {
+          super(종, 색깔);
+          this.age = 나이;
+        }
+        한살먹기 = function () {
+          return this.age + 1;
+        };
+      }
+
+      var 고양이1 = new 고양이("코숏", "white", 5);
+      var 고양이2 = new 고양이("러시안블루", "brown", 2);
+
+      // 3. 강아지는 에러. 고양이는 적용
+      //   한살먹기(){
+      //         return this.age + 1
+      //     } 이거 추가.
+
+      // 4.
+      class Unit {
+        constructor() {
+          this.공격력 = 5;
+          this.체력 = 100;
+        }
+        get battlePoint() {
+          return this.공격력 + this.체력;
+        }
+        set heal(health) {
+          this.체력 = this.체력 + health;
+        }
+      }
+
+      var marine = new Unit();
+      console.log(marine.battlePoint);
+      marine.heal = 50;
+      console.log(marine.체력);
+
+      // 5.
+      var data = {
+        odd: [],
+        even: [],
+        setter: function (...rest) {
+          rest.forEach(function (a) {
+            if (a % 2 == 0) {
+              data.even.push(a); // 짝수일때
+            } else {
+              data.odd.push(a); // 홀수일때
+            }
+          });
+        },
+        getter: function () {
+            return [...this.odd, ...this.even ].sort() // return 형식으로 만들었어야지!
+        //   console.log(data.odd.sort());
+        //   console.log(data.even.sort());
+        },
+      };
+      data.setter(5, 4, 3, 2, 1);
+    </script>
+  </body>
+</html>

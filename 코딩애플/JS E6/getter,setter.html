@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 사람 = {
+        name: "park",
+        age: 30,
+        get nextAge() {
+          return this.age + 1;
+        },
+        // setAge(나이){
+        //     this.age = parseInt(나이);
+        // } // 왜함? : 데이터 수정시 검사 가능함. 데이터 관리 편함
+
+        set setAge(나이) {
+          this.age = parseInt(나이);
+        } // set은 데이터 변경하는 함수. get은 데이터 꺼내쓰는 함수
+      };
+
+      // 사람.setAge(20);
+
+      사람.setAge = "20";
+      
+    //   *주의* getter 함수는 무조건 return 있어야 함
+    //          setter 함수는 파라미터 있어야 함
+
+
+    // class에서도 가능
+    class 사람1 {
+        constructor(name,age){
+            this.name = name
+        }
+        get nextAge(){
+            return this.age + 1
+        }
+        set setAge(age){
+            this.age = age
+        }
+        
+    }
+
+    var 사람2 = new 사람1('park',20)
+    </script>
+  </body>
+</html>

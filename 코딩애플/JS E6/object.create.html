@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object.create();
+       
+        var parent = {
+            name: 'kim',
+            age : 50
+        }
+
+        var child = Object.create(parent)
+
+        console.log(child.name) // kim. 본안에게 없으면 부모에게 찾음
+
+        child.age = 20;
+
+        var grandchild = Object.create(child)
+
+        console.log(grandchild.age); // 20. 순차적으로 올라가며 찾기 때문
+
+
+    </script>
+</body>
+</html>

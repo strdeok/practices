@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- - View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Select and submit a number rating
+- See the "Thank you" card state after submitting a rating -->
+
+    <!-- Rating state start -->
+    <div id="before_rate" class="paragraph">
+      <img src="images/icon-star.svg" alt="star_logo" id="star_logo">
+      <h1 id="title">How did we do?</h1>
+      <div class="article" id="first_article">Please let us know how we did with your support request. All
+        feedback is appreciated to help us improve our offering!</div>
+      <div id="rating">
+        <button class="ratings">1</button>
+        <button class="ratings">2</button>
+        <button class="ratings">3</button>
+        <button class="ratings">4</button>
+        <button class="ratings">5</button>
+      </div>
+      <input type="submit" value="SUBMIT" onclick="submit()">
+
+      <!-- Rating state end -->
+    </div>
+    <!-- Thank you state start -->
+    <div id="after_rate" class="paragraph">
+      <img src="images/illustration-thank-you.svg" alt="thanks" id="thanks">
+      <div id="selected">You selected  out of 5 </div>
+      <h1>Thank you!</h1>
+      <div class="aricle" id="thanks_aritcle">We appreciate you taking the time to give a rating. If
+        you ever need more support, don’t hesitate to get in touch!</div>
+
+      <!-- Thank you state end -->
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>. -->
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </main>
+</body>
+
+</html>

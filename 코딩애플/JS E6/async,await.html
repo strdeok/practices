@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>눌러봐</button>
+    <script>
+      async function 더하기() {
+        // 성공만 가능//
+        var 프로미스 = new Promise(function (성공, 실패) {
+          var 힘든연산 = 1 + 2;
+          성공(100);
+        });
+
+        // 프로미스.then(function () {
+        //   console.log("성공!!");
+        // });
+
+        try {
+          var 결과 = await 프로미스; // then 대신 사용가능
+          console.log(결과);
+        } catch {
+          console.log("실패!");
+        } // try {이걸하고} catch {안되면 이거 해주셈}
+
+        //    return 1 + 1;/
+      }
+
+      더하기();
+
+      //   더하기().then(function (result) {
+      //     console.log(result)
+      //     console.log("성공");
+      //   });
+    </script>
+    <!-- 예제용 script -->
+    <script>
+      // <button>을 누르면 성공하는 Promise 만들기
+      var 프로미스 = new Promise(function (성공, 실패) {
+        document.querySelector("button").addEventListener("click", function () {
+          성공();
+        });
+      });
+
+      async function 누름() {
+        var 결과 = await 프로미스;
+        console.log("잘했다");
+      }
+
+      누름();
+    </script>
+  </body>
+</html>

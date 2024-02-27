@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form class="container my-5 form-group">
+      <p>상품선택</p>
+      <select class="form-select mt-2">
+        <option>모자</option>
+        <option>셔츠</option>
+        <option>바지</option>
+      </select>
+
+      <select class="form-select mt-2" style="display: none">
+      </select>
+    </form>
+
+    <div id="test"></div>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- html 조작 -->
+    <script>
+      // 태그를 만드는 함수
+      var a = document.createElement("p");
+      a.innerHTML = "hello";
+      document.querySelector("#test").appendChild(a);
+
+      // 더 간단한 버전
+      var 템플릿 = "<p>안녕</p>";
+      // 첫번째 파라미터 : 위치지정 , 두번째 파라미터 : 변수
+      document.querySelector("#test").insertAdjacentHTML("beforeend", 템플릿);
+      //                              innerHTML로 하면 전부 갈아치움
+      $("#test").append(템플릿);
+
+      // 활용
+      // 셔츠를 고르면 새로운 select 생김
+      var select_bar = $(".form-select")[0];
+
+      select_bar.addEventListener("input", function () {
+        if (select_bar.value == "셔츠") {
+          $(".form-select")[1].style.display = "block";
+        var shirts = `<option>90</option>
+        <option>95</option>
+        <option>100</option>`
+        $(".form-select").eq(1).html(shirts);
+        } 
+
+        else if (select_bar.value == "바지") {
+          $(".form-select")[1].style.display = "block";
+          var pants = `<option>28</option>
+                         <option>30</option>`;
+          $(".form-select").eq(1).html(pants);
+        } 
+        
+        else {
+          $(".form-select")[1].style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

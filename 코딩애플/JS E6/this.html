@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>this는 "내 주인님은 ~~~ 입니다" 라고 말해줌</p>
+    <script>
+
+      //   "use strict";
+      //   // 엄격하게 동작
+
+      //   x = 30;
+      //   // var 없어서 이거 오류남
+
+      var 오브젝트 = {
+        data: "kim",
+        함수: function () {
+          console.log("object 안 함수");
+          console.log(this);
+          // this = 자신을 가지고 있는 오브젝트
+        },
+      };
+
+      console.log(오브젝트.data);
+      오브젝트.함수();
+
+      console.log(this);
+
+      function 함수() {
+        console.log(this);
+        // strict mode에서 undefined
+      }
+      //  this를 그냥 쓰거나 함수 안에서 쓰면 window
+
+      //   함수나 변수를 전역공간에서 만들면 window에 보관하기 때문에 this = window
+    </script>
+  </body>
+</html>

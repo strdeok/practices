@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var person = new Map();
+      person.set("name", "kim");
+      person.set("age", "20");
+      person.set(100, 100); // 자료이름 숫자도 됨
+      person.set([1, 2], [1, 2, 3]); // array도 가능
+      console.log(person);
+
+      console.log(person.get("age"));
+      console.log(person.get(100));
+
+      person.delete("name");
+
+      var person1 = new Map([
+        ["name", "park"],
+        ["age", 25],
+      ]); // 이런식으로도 추가 가능
+
+      
+      for (var key of person.keys()) {
+          console.log(key);
+        }
+        // Map은 자료간의 연관성을 표현하기 위해 사용
+
+        var 출석부 = ['John','tom','andy','tom']
+
+        var 출석부2 = new Set(출석부) 
+
+        출석부 = [...출석부2] // set 자료형 제거하고 array만 남게
+
+        출석부2.add('bob') // 자료 추가
+        console.log(출석부2.size) // 자료개수
+
+        
+
+        // Set은 중복을 허용하지 않은 Array
+    </script>
+  </body>
+</html>

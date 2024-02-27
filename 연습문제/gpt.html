@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+nav li {
+	margin-right: 1em;
+}
+
+nav li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 2em;
+}
+
+.product-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1em;
+	max-width: 400px;
+}
+
+.product-info img {
+	max-width: 100%;
+	margin-bottom: 1em;
+}
+
+form label {
+	margin-right: 1em;
+}
+
+form input[type="number"] {
+	width: 3em;
+}
+
+form button[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 0.5em 1em;
+	cursor: pointer;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+}
+    </style>
+</head>
+<body>
+	<header>
+		<h1>My Shop</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="product-info">
+			<h2>Product Title</h2>
+			<img src="product.jpg" alt="Product Image">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor commodo turpis ut pulvinar.</p>
+			<form>
+				<label for="quantity">Quantity:</label>
+				<input type="number" id="quantity" name="quantity" min="1" max="10">
+				<button type="submit">Add to Cart</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 My Shop. All rights reserved.</p>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="버튼">버튼</button>
+
+    <script>
+      function 기계() {
+        this.이름 = "kim";
+        // 새로 생성되는 오브젝트
+      }
+
+      var object = new 기계();
+
+      document.getElementById("버튼").addEventListener("click", function (e) {
+        console.log(this);
+        console.log(e.currentTarget);
+        // 둘이 또이또이
+
+        var array = [1, 2, 3];
+        array.forEach(function (a, i) {
+          console.log(`array : ${a} ${i}`);
+          console.log(this);
+          //   window가 뜨는 이유: 함수가 전역 함수처럼 쓰였기 때문
+        });
+      });
+
+      var object = {
+        이름: ["kim", "lee", "park"],
+        함수: function () {
+          object.이름.forEach(function () {
+            console.log(this);
+          });
+        },
+      };
+      object.함수();
+    //   wnidow가 뜸 : 위와 같음
+    </script>
+  </body>
+</html>

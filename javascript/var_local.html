@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a(){
+            var i = 0;
+            // var를 통해 선언하지 않으면 a는 계속 0이 되기 때문에 밑의 반복문에서 a는 절대 5보다 커질 수 없음
+        }
+        for(var i = 0; i < 5; i++){
+            a();
+            document.write(i);
+        }
+    </script>
+</body>
+</html>

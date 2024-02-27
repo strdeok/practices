@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        width: 400px;
+        background-color: hsl(240, 73%, 66%);
+        padding: 20px;
+        border-radius: 5px;
+        display: none;
+      }
+
+      .close_button {
+        border: none;
+        background-color: hsl(240, 73%, 66%);
+      }
+
+      .close_button:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box" id="alert">
+      Alert 박스
+      <button class="close_button" onclick="document.getElementById('alert').style.display = 'none';">X</button>
+    </div>
+    <button onclick="alert_box_on()">버튼</button>
+    <script>
+      function alert_box_on() {
+        document.getElementById("alert").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vscope='global';
+        function fscope(){
+            var vscope = 'local';
+            alert(vscope);
+        }
+        fscope();
+        alert(vscope);
+        // vscope는 전역, fscope는 지역 변수
+        // 단 var를 이용하지 않으면 전역변수가 됨
+    </script>
+</body>
+</html>

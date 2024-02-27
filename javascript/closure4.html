@@ -1,0 +1,15 @@
+<body>
+<script>
+  var arr = [];
+  for (var i = 0; i < 5; i++) {
+    arr[i] = function (id) {
+      return function () {
+        return id;
+      };
+    }(i);
+  }
+  for (var index in arr) {
+    document.write(arr[index]());
+  }
+</script>
+</body>

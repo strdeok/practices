@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #parent, #other{border:5px solid tomato;}
+        #me{background-color: black;
+            color:white;
+            position: absolute;
+            /* absolute일때 */
+            /* 부모가 static일 때: html을 기준으로 움직임 */
+            /* 부모가 static이 아니면 부모를 기준으로 움직임 */
+            left: 0px;
+            top:0px;}
+            
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="parent">parent
+        <div id="me">me</div>
+    </div>
+</body>
+</html>

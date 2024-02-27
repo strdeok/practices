@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="test" src="https://codingapple1.github.io/kona.jpg" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      // 1. <img> 이미지 로딩 성공시 특정 코드를 실행
+      var promise1 = new Promise(function (resolve, reject) {
+        document.getElementById("test").addEventListener("load", function () {
+          resolve();
+        });
+        document.getElementById("test").addEventListener("error", function () {
+          reject();
+        });
+      });
+      promise1
+        .then(function () {
+          console.log("성공!");
+        })
+        .catch(function () {
+          console.log("실패!");
+        });
+
+      // 2. Ajax 요청이 성공하면 코드를 실행
+      var promise2 = new Promise(function (resolve, reject) {
+        $.get("https://codingapple1.github.io/hello.txt")
+          .done(function () {
+            resolve();
+          })
+          .fail(function () {
+            reject();
+          });
+      });
+
+      promise2
+        .then(function () {
+          $.get("https://codingapple1.github.io/hello.txt").done(function (
+            data
+          ) {
+            console.log(data);
+          });
+        })
+        .catch(function () {
+          console.log("실패!");
+        });
+
+      // 3. Promise chaining
+      promise2.then(function () {
+        $.get("https://codingapple1.github.io/hello2.txt").done(function (
+          data
+        ) {
+          console.log(data);
+        });
+      });
+    </script>
+  </body>
+</html>

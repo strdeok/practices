@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>장바구니 페이지</div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var 목록 = JSON.parse(localStorage.getItem("cart")) 
+      console.log(목록);
+      for (i=0;i<목록.length;i++){
+        $('div').append(`<p>${목록[i]}</p>`)
+      }
+    </script>
+  </body>
+</html>

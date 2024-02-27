@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 이름 = "좋은사람";
+      var 문자 = `안녕하세요 저는 ${이름}입니다`;
+
+      function 해체분석기(문자들, 변수들) {
+        console.log(문자들[1]+문자들[0]);
+        console.log(변수들);
+      }
+
+      해체분석기`안녕하세요 저는 ${이름}입니다`;
+      //   중괄호 기준으로 나눔
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Student(name,age) {
+        this.name = name;
+        this.age = age;
+        this.sayHi = function () {
+          console.log(`안녕하세요 ${this.name}입니다`);
+        };
+      }
+
+      var 학생1 = new Student('kim',15);
+      var 학생2 = new Student('park',16);
+      var 학생3 = new Student('lee',17);
+    //   생성자 함수는 new 연산자와 같이 써야 함
+
+    // practice
+    function pro(name,price){
+        this.name = name;
+        this.price = price;
+        this.부가세 = function(){
+            console.log(this.price*0.1)
+        }
+    }
+
+    var product1 = new pro('shirts',50000)
+    var product2 = new pro('pants',60000)
+    console.log (product1)
+    console.log (product2)
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row"></div>
+      <div class="container">
+        <button id="name_sort" class="btn btn-danger">
+          상품명 '다나가' 정렬
+        </button>
+        <button id="price_filter" class="btn btn-danger">
+          6만원 이하 상품보기
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var products = [
+        { id: 0, price: 70000, title: "Blossom Dress" },
+        { id: 1, price: 50000, title: "Springfield Shirt" },
+        { id: 2, price: 60000, title: "Black Monastery" },
+      ];
+
+      // localStorage와 sessionStorage는 (Key : value) 형태로 문자와 숫자만 저장가능_단 5mb만 저장 가능
+      // localStorage는 사이트 재접속해도 유지 / sessionStorage는 사이트 나가면 삭제
+
+      products.forEach((a, i) => {
+        var card = `<div class="col-sm-4">
+              <img src="https://via.placeholder.com/600" class="w-100">
+              <h5 class="name">${products[i].title}</h5>
+              <p>가격 : ${products[i].price}</p>
+              <button class="buy">구매</button>
+            </div>`;
+        $(".row").append(card);
+      });
+
+      // 반복문을 사용하여 client-server rendering 구현
+      var 개수 = $(".card").length;
+      console.log(개수);
+
+      for (let i = 0; i < 개수; i++) {
+        $("h5")[i].innerHTML = products[i].title;
+        $("p")[i].innerHTML = "가격: " + products[i].price;
+      }
+
+      // localStorage 예제
+      localStorage.setItem("key", "value");
+      localStorage.getItem("key");
+      localStorage.removeItem("key");
+
+      // 강제로 array를 저장 가능한 방법
+      var arr = [1, 2, 3];
+      var newarr = JSON.stringify(arr);
+      localStorage.setItem("num", newarr);
+      var 꺼냄 = localStorage.getItem("num");
+      console.log(꺼냄);
+      console.log(JSON.parse(꺼냄));
+
+      // 수정법(자료꺼내고, 수정하고, 다시 넣으셈)
+      var arr2 = JSON.parse(꺼냄);
+      arr2.push(4);
+      console.log(arr2);
+      var newarr2 = JSON.stringify(arr2);
+      localStorage.setItem("new", newarr2);
+
+      // 구매버튼 누르면 상품명을 localstrage에 저장
+      // arr형태로 저장되고 추가되게
+      // 첫구매와 이미 누른후 구분해서
+      // cart.html방문시 localStorage에 저장된 상품명 다 보여주기
+
+      /** 답 **/
+      $(".buy").click(function (e) {
+        var title = $(e.target).siblings("h5").text();
+
+        if (localStorage.getItem("cart") != null) {
+          var 꺼낸거 = JSON.parse(localStorage.cart);
+          꺼낸거.push(title);
+          // 중복제거
+          for (var i = 0; i < 꺼낸거.length; i++) {
+            var out = 꺼낸거[i];
+            for (var k = i + 1; k < 꺼낸거.length; k++) {
+              if (out == 꺼낸거[k]) {
+               console.log(꺼낸거.splice(i,1));
+              }
+            }
+          }
+          localStorage.setItem("cart", JSON.stringify(꺼낸거));
+        } else {
+          localStorage.setItem("cart", JSON.stringify([title]));
+        }
+      });
+
+      // 내가 한거
+      // var 장바구니 = [];
+
+      // $('.buy').on('click', function(){
+      //   console.log($(this).siblings('h5').text())
+      //   var selected = $(this).siblings('h5').text();
+      //   장바구니.push(selected);
+      //   console.log(장바구니);
+      //   var 장바구니_2 = JSON.stringify(장바구니);
+      //   localStorage.setItem("cart",장바구니_2);
+      // })
+    </script>
+  </body>
+</html>

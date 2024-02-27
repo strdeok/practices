@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      ul.list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+      }
+      ul.list::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .tab-button {
+        display: block;
+        padding: 10px 20px 10px 20px;
+        float: left;
+        margin-right: -1px;
+        margin-bottom: -1px;
+        color: grey;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .orange {
+        border-top: 2px solid orange;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid white;
+        border-left: 1px solid #ccc;
+        color: black;
+        margin-top: -2px;
+      }
+      .tab-content {
+        display: none;
+        padding: 10px;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 아예 싹 다 바꾸기 -->
+    <div class="container mt-3">
+      <div class="whole card p-3">상품명 / 가격 / 색상</div>
+    </div>
+
+    <!-- span으로 나눠서 하기 -->
+    <div class="container mt-3">
+      <div class="card p-3">
+        <span class="pro-name">상품명</span>
+        <span class="pro-price">가격</span>
+      </div>
+    </div> 
+
+    <div class="container mt-5">
+      <ul class="list">
+        <li class="tab-button orange">Products</li>
+        <li class="tab-button">Information</li>
+        <li class="tab-button">Shipping</li>
+      </ul>
+      <div class="tab-content show">
+        <p>상품설명입니다. Product</p>
+      </div>
+      <div class="tab-content">
+        <p>스펙설명입니다. Information</p>
+      </div>
+      <div class="tab-content">
+        <p>배송정보입니다. Shipping</p>
+      </div>
+    </div>
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.js"
+      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // array 자료형
+      var car = ["소나타", 50000, "white"];
+
+      // 수정하고 싶다
+      car[0] = "아반떼";
+
+      // 정렬하고 싶다
+      car.sort();
+
+      // 자르고 싶다
+      console.log(car.slice(1, 3));
+
+      console.log(car);
+
+      // object 자료형
+      var car2 = { name: "소나타", price: 50000, color: "white" };
+      car2["name"] = "포르쉐";
+      car2.price = 200000;
+      console.log(car2["name"]);
+      console.log(car2["price"]);
+
+      // array와 object 차이점
+      // array는 순서대로 저장 (정렬 가능)
+      // object는 이름대로 저장 (데이터가 많을 때 사용하기 좋음)
+
+      // 전체 바꾸기
+      $(".whole").html(car2["name"] + "/" + car2["price"] + "/" + car2["color"]);
+
+      // span 단위로 나누기
+      $('.pro-name').html(car2.name);
+      $('.pro-price').html(car2.price)
+
+    </script>
+  </body>
+</html>

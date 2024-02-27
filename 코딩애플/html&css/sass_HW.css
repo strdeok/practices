@@ -1,0 +1,63 @@
+.HW1 ul {
+  width: 300px;
+  padding: 10px;
+  margin: 0px;
+  border: solid 1px black;
+}
+.HW1 ul:hover {
+  background-color: royalblue;
+  color: white;
+}
+
+.alert-box-green {
+  width: 500px;
+  height: 50px;
+  padding: 5px;
+  margin: 20px;
+  background-color: bisque;
+  background-color: hsl(99, 33%, 83%);
+  color: hsl(120, 81%, 29%);
+}
+
+.alert-box-blue {
+  width: 500px;
+  height: 50px;
+  padding: 5px;
+  margin: 20px;
+  background-color: bisque;
+  background-color: hsl(205, 33%, 83%);
+  color: hsl(202, 81%, 29%);
+}
+
+.alert-box-yellow {
+  width: 500px;
+  height: 50px;
+  padding: 5px;
+  margin: 20px;
+  background-color: bisque;
+  background-color: hsl(52, 33%, 83%);
+  color: hsl(57, 81%, 29%);
+}
+
+.HW3 {
+  width: 500px;
+}
+
+.HW3 div > div {
+  border: solid 1px black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-6 {
+  width: 50%;
+  text-align: center;
+}
+
+.col-4 {
+  width: 33.33333333%;
+  text-align: center;
+}/*# sourceMappingURL=sass_HW.css.map */

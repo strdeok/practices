@@ -1,0 +1,171 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+#mob_logo {
+    width: 100px;
+    margin: 30px 30px;
+}
+
+#des_logo {
+    display: none;
+}
+
+#des_img {
+    display: none;
+}
+
+#txt_part {
+    text-align: center;
+}
+
+#title {
+    margin: 55px 30px 15px 30px;
+    text-transform: uppercase;
+    font-size: 41px;
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+
+#we {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+#article {
+    font-size: 14px;
+    color: hsl(0, 36%, 70%);
+    line-height: 20px;
+    margin: 0 30px;
+}
+
+form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 45px;
+    border: solid 1px hsl(0, 36%, 70%, 0.5);
+    border-radius: 50px;
+    width: 300px;
+    background-color: hsl(0, 100%, 98%);
+    text-indent: 20px;
+}
+
+input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 36%, 70%, 0.5);
+    position: relative;
+}
+
+#error {
+    position: absolute;
+    display: none;
+}
+
+button {
+    position: absolute;
+    right: 30px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: hidden;
+    border-radius: 50px;
+    width: 70px;
+    height: 50px;
+    box-shadow: 0 10px 10px hsl(0, 36%, 70%, 0.5);
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 96%), hsl(0, 74%, 84%));
+}
+
+#error_msg {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin: 10px 20px;
+    font-size: 14px;
+}
+
+.active{
+    border:solid 2px hsl(0, 93%, 68%);
+}
+
+@media all and (min-width: 1400px) {
+    #mob_img {
+        display: none;
+    }
+
+    #des_img {
+        display: block;
+    }
+
+    #mob_logo {
+        display: none;
+    }
+
+    #des_logo {
+        display: block;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #txt_part {
+        padding: 65px 160px;
+        background-image: url("images/bg-pattern-desktop.svg");
+        text-align: left;
+    }
+
+    #title {
+        margin: 126px 0px 15px 0px;
+        font-size: 74px;
+    }
+    #article {
+        font-size: 16px;
+        line-height: 30px;
+        margin: 0px 80px 0px 0px;
+    }
+    form{
+        justify-content: unset;
+    }
+    input {
+        height: 50px;
+        width: 400px;
+        background-color: hsl(0, 100%, 98%, 0.1);
+    }
+    #error {
+        left: 450px;
+    }
+    button {
+        height: 55px;
+        left: 510px;
+        width: 100px;
+    }
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

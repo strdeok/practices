@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .shake_button {
+        margin-left: 50%;
+        text-align: center;
+        padding: 10px;
+        color: white;
+        background-color: skyblue;
+        border: none;
+      }
+
+      .shake_button:hover {
+        animation-name: 흔들흔들;
+        animation-duration: 0.5s;
+      }
+
+      .plus {
+        margin: 150px auto;
+        text-align: center;
+        width: 100px;
+        font-size: 100px;
+      }
+
+      .plus:hover {
+        animation-name: 돌아감;
+        animation-duration: 1s;
+        cursor: pointer;
+        animation-fill-mode: forwards;
+      }
+
+      .menu {
+        position: fixed;
+        left: -400px;
+        text-align: center;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        width: 33%;
+        height: 100vh;
+        transition: all 1s;
+      }
+
+      .menu:hover {
+        transition: all 1s;
+        left: 0px;
+      }
+
+      .menu:hover .a {
+        animation-name: 빼꼼;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      .menu:hover p {
+        animation-name: 띠용;
+        animation-duration: 3s;
+      }
+
+      @keyframes 흔들흔들 {
+        0% {
+          transform: rotate(-10deg);
+        }
+
+        33% {
+          transform: rotate(10deg);
+        }
+
+        66% {
+          transform: rotate(-10deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+
+        /* margin으로 해도 되지만 margin은 translate보다 느림 */
+        /* Render tree -> Layout -> Paint -> Composite */
+      }
+
+      @keyframes 돌아감 {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        25% {
+          transform: rotate(20deg);
+        }
+
+        100% {
+          transform: rotate(-45deg) scale(2);
+        }
+      }
+
+      @keyframes 빼꼼 {
+        100% {
+          text-align: center;
+        }
+      }
+
+      @keyframes 띠용 {
+        0% {
+          transform: translateX(-150px);
+        }
+        50% {
+          transform: translateX(20px) skewX(-50deg);
+        }
+        100% {
+          transform: translate(0px);
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="menu">
+        <div class="a" style="text-align: right">Menu</div>
+        <p class="b">item</p>
+      </div>
+    <div>
+      <button class="shake_button">BUTTON</button>
+    </div>
+    <div class="plus">+</div>
+    
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sint
+      atque id optio eos possimus sapiente placeat. Eveniet placeat cupiditate
+      beatae ullam nemo a, hic reiciendis molestias. Commodi, nisi delectus.
+    </div>
+  </body>
+</html>

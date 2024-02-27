@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- en이 아니라 ko -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 예시문제</title>
+</head>
+<body>
+    <form>
+<!-- form method="post"로 해야됨 -->
+    <p>고객명 : <input type="text" name="name"></p>
+    <!-- <label for="name">고객명 : <label>
+        <input type하고 id="name"까지 -->
+    <p>전화번호 : <input type="number" name="num"></p>
+    <P>E-mail : <input type="email" name="address"></P>
+    <p>피자선택 :  
+    <select>
+        <option value="default">피자를 선택하세요</option>
+        <option value="cheeze">치즈피자</option>
+        <option value="bulgogi">불고기피자</option>
+        <option value="combination">콤비네이션피자</option>
+    </select></p>
+    <p>
+        <fieldset>
+            <legend>피자사이즈</legend>
+                <p><input type=radio>small</p>
+                <p><input type=radio>medium</p>
+                <p><input type=radio>large</p>
+        </fieldset>
+    </p>
+
+    <p>
+        <fieldset>
+            <legend>토핑선택</legend>
+            <p><input type="checkbox">베이컨</p>
+            <p><input type="checkbox">치즈</p>
+            <p><input type="checkbox">양파</p>
+            <p><input type="checkbox">버섯</p>
+        </fieldset>
+    </p>
+    <p>
+        희망배송시간 : <input type="time">
+    </p>
+    <p>배송시 요청사항 : <textarea rows="5" cols="20"></textarea></p>
+    <p><input type="submit" name="주문하기" value="주문하기"></p>
+</form>
+</body>
+</html>
+<!-- 전체적으로 label, name, value 쓰는게 부족 -->

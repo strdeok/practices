@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function outter() {
+        var title = "coding everybody";
+        return function () {
+          alert(title);
+        };
+      }
+      inner = outter();
+      inner();
+    //   외부함수는 외부함수의 지역변수를 사용하는 내부함수가 소멸할때 까지 소멸되지 않음
+    </script>
+  </body>
+</html>

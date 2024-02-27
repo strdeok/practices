@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row"></div>
+    <div class="container">
+      <button id="name_sort" class="btn btn-danger">
+        상품명 '다나가' 정렬
+      </button>
+      <button id="price_filter" class="btn btn-danger">
+        6만원 이하 상품보기
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+      var products = [
+        { id: 0, price: 70000, title: "Blossom Dress" },
+        { id: 1, price: 50000, title: "Springfield Shirt" },
+        { id: 2, price: 60000, title: "Black Monastery" },
+      ];
+
+      products.forEach((a, i) => {
+        var card = `<div class="col-sm-4">
+              <img src="https://via.placeholder.com/600" class="w-100">
+              <h5>${products[i].title}</h5>
+              <p>가격 : ${products[i].price}</p>
+            </div>`;
+        $(".row").append(card);
+      });
+
+      // 반복문을 사용하여 client-server rendering 구현
+      var 개수 = $(".card").length;
+      console.log(개수);
+
+      for (let i = 0; i < 개수; i++) {
+        $("h5")[i].innerHTML = products[i].title;
+        $("p")[i].innerHTML = "가격: " + products[i].price;
+      }
+
+      // sort는 문자정렬
+      // function까지 쓰면 숫자정렬
+      var array = [1, 2, 3, 4, 54, 5, 123];
+      array.sort(function (a, b) {
+        // a, b는 array 안의 숫자
+
+        return a - b;
+        // return 오른쪽이 양수면 a를 오른쪽으로 보내줌
+        // 음수면 b를 오른쪽으로
+        // 그래서 서로 대소 비교
+      });
+
+      // filter 함수
+      // 무조건 변수로 지정을 해줘야 함
+      var array3 = array.filter(function (a) {
+        return a > 100;
+      });
+      console.log(array3);
+
+      // map
+      var array4 = array.map(function (a) {
+        return a * 4;
+      });
+      console.log(array4);
+
+      //상품명 다나가 정렬
+      $("#name_sort").on("click", function () {
+        products.sort((a, b) => {
+          if (a.title > b.title) {
+            return -1;
+          } else {
+            return 1;
+          }
+
+
+        });
+
+        $(".row").html('');
+
+        products.forEach((a, i) => {
+          var card = `<div class="col-sm-4">
+              <img src="https://via.placeholder.com/600" class="w-100">
+              <h5>${products[i].title}</h5>
+              <p>가격 : ${products[i].price}</p>
+            </div>`;
+          $(".row").append(card);
+        });
+      });
+
+      // 6만원 이하 상품보기
+      $('#price_filter').on('click', () => {
+        var filtered = products.filter((a) => {
+          return a.price <= 60000;
+        })
+        console.log(filtered)
+        $(".row").html('');
+        filtered.forEach((a, i) => {
+          var card = `<div class="col-sm-4">
+              <img src="https://via.placeholder.com/600" class="w-100">
+              <h5>${products[i].title}</h5>
+              <p>가격 : ${products[i].price}</p>
+            </div>`;
+          $(".row").append(card);
+        });
+
+
+      })
+    </script>
+</body>
+
+</html>

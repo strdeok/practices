@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      .black-bg {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        padding: 30px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+      }
+      .white-bg {
+        background: white;
+        border-radius: 5px;
+        padding: 30px;
+      }
+      .show {
+        visibility: visible;
+        opacity: 1;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn btn-danger" id="log_in">로그인</button>
+
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="Email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input type="text" class="form-control" id="Password" />
+          </div>
+          <button type="submit" class="btn btn-primary" id="send">전송</button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
+        
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#log_in").on("click", function () {
+        $(".black-bg").addClass("show");
+        $(".black-bg").removeClass("hide");
+      });
+
+      $("#close").on("click", function () {
+        $(".black-bg").addClass("hide");
+        $(".black-bg").removeClass("show");
+      });
+
+      $(".black-bg").on("click", function (e) {
+        if ($(e.target).is($(".black-bg"))){
+            // 아니면 위에 이거 쓰던가 e.target == document.querySelector(".black-bg")
+            console.log($(e.target))
+            console.log($(".black-bg"))
+        $(".black-bg").addClass("hide");
+        $(".black-bg").removeClass("show");
+        }
+
+        // e.target; // 유저가 실제로 누른거
+        // console.log(e.target);
+        // e.currentTarget; // 이벤트 리스너 달린곳
+        // console.log(e.currentTarget);
+        // e.preventDefault(); // 이벤트 기본동작 중단
+        // e.stopPropagation; // 이벤트버블링 중단
+      });
+      // 일관성 있게 class를 부착해 변경했다면 계속 class를 조작해야됨
+      // black-bg를 클릭하면 사라지는 건데 자식 요소를 눌러도 사라짐 WHY?
+      // 모든 브라우저는 이벤트 버블링이 일어남 (이벤트가 상위 html로 퍼지는 현상)
+    </script>
+  </body>
+</html>

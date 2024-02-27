@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #parent, #other{border:5px solid tomato;}
+        #large{height:10000px;
+            background-color: tomato;}
+        #me{background-color: black;
+            color:white;
+            position: fixed;
+            /* 스크롤과 같은 것과 무관하게 항상 
+            자신의 위치에 독립된 상태로 고정 */
+            right: 0px;
+            bottom:0px;
+            width:100%;
+            text-align: center;}
+            /* width, height를 지정하지않으면 자신의 크기만큼 가짐 */
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="parent">parent
+        <div id="me">me</div>
+    </div>
+    <div id="large">large</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pseudo::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+        .pseudo::after {
+            content: "good";
+            color: blue;
+        }
+
+        .pseudo::before {
+            content: "yammy";
+            color:chocolate;
+        }
+        /* pseudo class = : 다른상태일때
+           pseudo element = :: 내부의 일부분만 다른 상태 */
+    </style>
+</head>
+<body>
+    <div class="pseudo">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam maiores reprehenderit aperiam itaque omnis et dolor? Aliquam et laborum voluptatibus. Qui illo, expedita ab totam asperiores debitis aliquid. Rerum, facere.
+
+    </div>
+</body>
+</html>

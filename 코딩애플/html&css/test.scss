@@ -1,0 +1,40 @@
+// similar with css
+
+$main_color: #2a4cb2;
+$box_font: 18px;
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: $main_color;
+    font-size: $box_font - 2px;
+}
+
+.box {
+    div {
+        margin: auto;
+    }
+}
+// nesting
+
+%div {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.div_green {
+    @extend %div;
+    background-color: green;
+}
+
+.div_blue {
+    @extend %div;
+    background-color: blue;
+}
+
+.div_red{
+    @extend %div;
+    background-color: red;
+}
+//@extend

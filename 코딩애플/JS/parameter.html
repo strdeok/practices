@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        background-color: hsl(240, 73%, 66%);
+        padding: 20px;
+        border-radius: 5px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box" id="alert">dqad</div>
+    <button onclick="alert_box_on('아이디를 입력안하셨어요','block')">버튼1</button>
+<button onclick="alert_box_on('비번을 입력안하셨어요','block')">버튼2</button>
+    <script>
+      function alert_box_on(c,a,b) {
+        document.getElementById('alert').innerHTML = c
+        document.getElementById('alert').style.display = a;
+      }
+    </script>
+  </body>
+</html>
