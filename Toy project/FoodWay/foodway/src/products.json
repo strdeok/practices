@@ -4,7 +4,14 @@
     "name": "주방일기",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230318_219%2F1679108620472ROueW_JPEG%2FIMG_20230308_180948_074.jpg",
     "location": "37.5574761009119,126.9254638",
-    "info": "서울 마포구 양화로 178-8 2층 주방일기"
+    "info": "서울 마포구 양화로 178-8 2층 주방일기",
+    "recommend": ["유린기", "동파육", "홍콩식 바지락 볶음"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230318_219%2F1679108620472ROueW_JPEG%2FIMG_20230308_180948_074.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230324_115%2F1679634733567XmdPe_JPEG%2FIMG_20221130_175839_680.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230324_223%2F1679635142843YWODR_JPEG%2FIMG_20230324_141431_875.jpg"
+    ],
+    "type": "chinese"
   },
 
   {
@@ -12,7 +19,14 @@
     "name": "호리",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_32%2F1698056209384PQ6PB_JPEG%2FIMG_4959.jpeg",
     "location": "35.81637, 127.1428",
-    "info": "전북 전주시 완산구 전라감영3길 13-12 1층"
+    "info": "전북 전주시 완산구 전라감영3길 13-12 1층",
+    "recommend": ["수육전골", "바질 크림 새우", "소고기 타다키"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_32%2F1698056209384PQ6PB_JPEG%2FIMG_4959.jpeg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_129%2F16980562092989fI3p_JPEG%2FIMG_4981.jpeg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_35%2F1698056209986X9WQs_JPEG%2FIMG_4783.jpeg"
+    ],
+    "type": "korean"
   },
 
   {
@@ -20,7 +34,14 @@
     "name": "이자카야잔",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200301_45%2F1583008153012lRYGu_JPEG%2F_R5lHQC4eZHoGZOIWsCZNb4y.jpeg.jpg",
     "location": "37.6784826, 126.7558357",
-    "info": "경기 고양시 일산서구 대산로212번길 8-55 1층"
+    "info": "경기 고양시 일산서구 대산로212번길 8-55 1층",
+    "recommend": ["사시미", "나가사키 짬뽕", "시사모구이"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200301_45%2F1583008153012lRYGu_JPEG%2F_R5lHQC4eZHoGZOIWsCZNb4y.jpeg.jpg",
+      "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjlfNjMg%2FMDAxNjI0OTYyODk2NjQ3.9USDro0ZuczDPNfY781Y9uB4GyS4igrPHZe5EaDEM34g.PI28g76Yx5OmYxPIyflb-7zdd2KBWBnBvs3CeBahgakg.JPEG.guswjd641104%2FKakaoTalk_20210628_222630583_26.jpg",
+      "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzExMjhfMjQ4%2FMDAxNzAxMTMzNTg3MTcy.whzL7H8BQxNxecv7vo31_t0BtsSvCgH-O4crCTm9eKQg.6HqXqQAJ4psjrkmUOP3Y5d0KGe6NSs0GsVJ_-MtYWLgg.JPEG.naan78%2FIMG%25A3%25DF20231127%25A3%25DF180008%25A3%25DF529.jpg"
+    ],
+    "type": "japanese"
   },
 
   {
@@ -28,7 +49,12 @@
     "name": "개미집 서면본점",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_260%2F1441010891799aTWpy_JPEG%2F12068144_0.jpg",
     "location": "35.15404, 129.0583",
-    "info": "부산 부산진구 신천대로62번길 73"
+    "info": "부산 부산진구 신천대로62번길 73",
+    "recommend": ["낙곱새"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_260%2F1441010891799aTWpy_JPEG%2F12068144_0.jpg"
+    ],
+    "type": "korean"
   },
 
   {
@@ -36,7 +62,14 @@
     "name": "을지로쎄시봉",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201015_28%2F1602771931649RxbPy_JPEG%2F_HJaxYcCxnnBrvrbTL9Fcejl.jpeg.jpg",
     "location": "37.56362, 126.9932",
-    "info": "서울 중구 충무로 28 2층"
+    "info": "서울 중구 충무로 28 2층",
+    "recommend": ["쎄시봉플래터", "감바스", "에그인헬"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201015_28%2F1602771931649RxbPy_JPEG%2F_HJaxYcCxnnBrvrbTL9Fcejl.jpeg.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210330_82%2F1617050204356nW5PK_JPEG%2FzitN4tggOj6dmyAilZ5bzlfI.jpeg.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230317_59%2F1679039704299ziT8V_JPEG%2FCEC55211-CF09-40ED-8847-D192C9EF792E.jpeg"
+    ],
+    "type": "western"
   },
 
   {
@@ -44,14 +77,28 @@
     "name": "매니멀스모크하우스",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEyMjBfMTYg%2FMDAxNzAzMDM3ODIwMzY4.u_53X9VJkThBK03N1ObFN6ayB3GK4D9aGMuLphjORG0g.A2__9RZ67ZuKgk7xFtdJcD5U6-jwvQoryFKEMPK5eYQg.JPEG%2F20231219_190521.jpg.jpg",
     "location": " 37.53465, 126.9891",
-    "info": "서울 용산구 녹사평대로40길 47 2층"
+    "info": "서울 용산구 녹사평대로40길 47 2층",
+    "recommend": ["2 Meat Platter", "Rib Platter", "Manimal Platter"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220830_217%2F1661829425604i0o9v_JPEG%2F2mp.jpeg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231208_285%2F1702013707782A11tI_JPEG%2FIMG_5310.JPG",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220705_202%2F1656996476215a0zjO_JPEG%2F%25C7%25CD%25B8%25B6%25BD%25BA%25C5%25CD.jpg"
+    ],
+    "type": "western"
   },
   {
     "id": 7,
     "name": "하이볼 순",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_239%2F1693901191585R9nPN_JPEG%2F1000003979.jpg",
     "location": "37.60813, 126.9295",
-    "info": "서울 은평구 진흥로 180-1 1층"
+    "info": "서울 은평구 진흥로 180-1 1층",
+    "recommend": ["장어양념튀김", "고등어봉초밥", "온메밀면"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_215%2F1693901096682xNA6J_JPEG%2F1000003985.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_239%2F1693901191585R9nPN_JPEG%2F1000003979.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_66%2F16939014367611jTXe_JPEG%2F1000003987.jpg"
+    ],
+    "type": "japanese"
   },
 
   {
@@ -59,7 +106,14 @@
     "name": "야끼니꾸소량 합정본점",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210912_204%2F1631451351860zFCzV_JPEG%2F3_Wgb_WOSbXWCN62RYAUeZht.jpg",
     "location": "37.55259, 126.9066",
-    "info": "서울 마포구 포은로 38 1층 야끼니꾸소량"
+    "info": "서울 마포구 포은로 38 1층 야끼니꾸소량",
+    "recommend": ["소량카세", "호르몬3종", "스지차돌해장전골"],
+    "recommend_img": [
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210912_204%2F1631451351860zFCzV_JPEG%2F3_Wgb_WOSbXWCN62RYAUeZht.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230911_230%2F1694413005365yK9yD_JPEG%2FKakaoTalk_20230710_155704793.jpg",
+      "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230911_10%2F1694413105543gGhsg_JPEG%2FKakaoTalk_20230824_155135052_01.jpg"
+    ],
+    "type": "japanese"
   },
 
   {
@@ -67,6 +121,13 @@
     "name": "플레이그라운드브루어리 탭하우스",
     "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240215_129%2F17080055941497xjxb_JPEG%2F%25C5%25A9%25B1%25E2%25BA%25AF%25C8%25AFDSC05978.jpg",
     "location": "37.66547, 126.7561",
-    "info": "경기 고양시 일산서구 한류월드로 300 1층 1204호, 1205호"
+    "info": "경기 고양시 일산서구 한류월드로 300 1층 1204호, 1205호",
+    "recommend": ["PGB수제버거와 감자튀김", "PGB동파육", "트러플 감자튀김"],
+    "recommend_img": [
+      "https://naverbooking-phinf.pstatic.net/20240111_290/1704958032471IasiJ_JPEG/PGB%B9%F6%B0%C5.jpg",
+      "https://naverbooking-phinf.pstatic.net/20231219_75/1702975074671QrRTS_JPEG/%B5%BF%C6%C4%C0%B0.jpg",
+      "https://naverbooking-phinf.pstatic.net/20240111_15/1704957377257LbqKy_JPEG/%C6%AE%B7%AF%C7%C3%C7%C1%B7%BB%C4%A1%C7%C1%B6%F3%C0%CC.jpg"
+    ],
+    "type": "western"
   }
 ]

@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import logo from "./assets/Foodflix.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Nav, Carousel } from "react-bootstrap";
-import { Routes, Route, useNavigate, Outlet } from "react-router-dom";
+import { Nav, Carousel, Card } from "react-bootstrap";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Stores from "./products.json";
 import MapNaverDefault from "./map.js";
 
 function App() {
   let Navigate = useNavigate();
   let [nav_now, nav_change] = useState("");
+  let now_type = useLocation();
 
   return (
     <div className="App ">
@@ -134,8 +135,85 @@ function App() {
             ></Store_detail>
           }
         ></Route>
+        <Route
+          path="/korean"
+          element={
+            <>
+              <div className="row">
+                {Stores.map((a, i) => {
+                  return (
+                    <Type
+                      Stores={Stores}
+                      i={i}
+                      key={i}
+                      now_type={now_type}
+                    ></Type>
+                  );
+                })}
+              </div>
+            </>
+          }
+        />
+        <Route
+          path="/western"
+          element={
+            <>
+              <div className="row">
+                {Stores.map((a, i) => {
+                  return (
+                    <Type
+                      Stores={Stores}
+                      i={i}
+                      key={i}
+                      now_type={now_type}
+                    ></Type>
+                  );
+                })}
+              </div>
+            </>
+          }
+        />
+
+        <Route
+          path="/chinese"
+          element={
+            <>
+              <div className="row">
+                {Stores.map((a, i) => {
+                  return (
+                    <Type
+                      Stores={Stores}
+                      i={i}
+                      key={i}
+                      now_type={now_type}
+                    ></Type>
+                  );
+                })}
+              </div>
+            </>
+          }
+        />
+
+        <Route
+          path="/japanese"
+          element={
+            <>
+              <div className="row">
+                {Stores.map((a, i) => {
+                  return (
+                    <Type
+                      Stores={Stores}
+                      i={i}
+                      key={i}
+                      now_type={now_type}
+                    ></Type>
+                  );
+                })}
+              </div>
+            </>
+          }
+        />
       </Routes>
-      {/* bottom Nav */}
     </div>
   );
 }
@@ -156,19 +234,58 @@ function Store(props) {
 }
 
 function Store_detail(props) {
+  let recommend = props.Stores[props.nav_now].recommend;
+  let recommend_img = props.Stores[props.nav_now].recommend_img;
   return (
     <div className="d-flex ">
       <img src={props.Stores[props.nav_now].img}></img>
       <div>
-        <h1>{props.Stores[props.nav_now].name}</h1>
-        <p></p>
-        <MapNaverDefault
-          Stores={props.Stores}
-          nav_now={props.nav_now}
-        ></MapNaverDefault>
+        <div className="top">
+          <h1>{props.Stores[props.nav_now].name}</h1>
+          <h5>&lt; 추천메뉴 &gt;</h5>
+          <ul>
+            {recommend.map((a, i) => {
+              return <li key={i}>{a}</li>;
+            })}
+          </ul>
+        </div>
+        <div className="bottom">
+          <Carousel className="detail-slide">
+            <Carousel.Item>
+              <img src={recommend_img[0]} alt="First slide" />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img src={recommend_img[1]} alt="Second slide" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={recommend_img[2]} alt="Third slide" />
+            </Carousel.Item>
+          </Carousel>
+          <MapNaverDefault
+            Stores={props.Stores}
+            nav_now={props.nav_now}
+          ></MapNaverDefault>
+        </div>
       </div>
     </div>
   );
+}
+
+function Type(props) {
+  if (props.now_type.pathname === `/${props.Stores[props.i].type}`) {
+    return (
+      <div className="col-4">
+        <Card style={{ width: "100%" }}>
+          <Card.Img variant="top" src={props.Stores[props.i].img} />
+          <Card.Body>
+            <Card.Title>{props.Stores[props.i].name}</Card.Title>
+            <Card.Text>{props.Stores[props.i].info}</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+  }
 }
 
 export default App;

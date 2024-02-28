@@ -2,9 +2,13 @@ body {
   width: 1440px;
   /* 대형노트북 기준 */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: black;
 
+}
+
+#root {
+  height: 100%;
 }
 
 .App {
@@ -13,6 +17,8 @@ body {
   background-color: black;
   color: white;
   font-family: 'NanumGothic';
+  overflow: hidden;
+  height: 100%;
 }
 
 .nav {
@@ -71,14 +77,20 @@ a:active {
 
 .stores {
   height: 30rem;
-  /* padding: 50px; */
+
+}
+
+.row>* {
+  padding: 0px !important;
+  overflow: hidden;
 }
 
 .stores:hover {
   cursor: pointer;
 }
 
-.stores:hover > img {
+.stores:hover>img {
+  padding-top: 2rem;
   height: 90%;
   width: 90%;
   transition: all 0.6s;
@@ -96,18 +108,62 @@ img {
   justify-content: space-evenly;
 }
 
-.d-flex > img {
+.d-flex>img {
   width: 50%;
   height: 80%;
+  margin-left: 20px;
 }
 
-.d-flex > div {
+.d-flex>div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.marker { 
+.top>h5 {
+  margin-top: 60px;
+}
+
+ul {
+  text-align: left;
+  margin-top: 30px !important;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.bottom {
+  display: flex;
+  align-self: center;
+  height: 30%;
+}
+
+.detail-slide {
+  width: 25rem;
+  height: 100%;
+  position: absolute;
+}
+
+.carousel-indicators {
+  display: none !important;
+}
+
+.detail-slide>.carousel-inner>.carousel-item>img {
+  width: 100%;
+  height: 60%;
+}
+
+.marker {
   color: black;
   padding: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
 }
