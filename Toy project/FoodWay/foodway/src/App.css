@@ -1,4 +1,6 @@
-#root {
+body {
+  width: 1440px;
+  /* 대형노트북 기준 */
   width: 100%;
   height: 100%;
   background-color: black;
@@ -7,10 +9,10 @@
 
 .App {
   margin: 0 auto;
-  width: 1440px; /* 대형노트북 기준 */
   text-align: center;
   background-color: black;
-  color: white
+  color: white;
+  font-family: 'NanumGothic';
 }
 
 .nav {
@@ -64,21 +66,48 @@ a:active {
   width: 50%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .stores {
-  padding: 50px;
   height: 30rem;
-  transition: all 0.5s;
+  /* padding: 50px; */
 }
 
 .stores:hover {
-  padding: 0px;
-  height: 30rem;
+  cursor: pointer;
+}
+
+.stores:hover > img {
+  height: 90%;
+  width: 90%;
+  transition: all 0.6s;
 }
 
 img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.d-flex {
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.d-flex > img {
+  width: 50%;
+  height: 80%;
+}
+
+.d-flex > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marker { 
+  color: black;
+  padding: 10px;
 }

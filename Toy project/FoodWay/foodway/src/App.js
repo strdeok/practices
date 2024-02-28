@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import logo from "./assets/Foodflix.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Carousel } from "react-bootstrap";
 import { Routes, Route, useNavigate, Outlet } from "react-router-dom";
 import Stores from "./products.json";
+import MapNaverDefault from "./map.js";
 
 function App() {
+  let Navigate = useNavigate();
+  let [nav_now, nav_change] = useState("");
+
   return (
     <div className="App ">
       {/* Nav bar */}
@@ -103,12 +107,31 @@ function App() {
                 <div className="main-page">
                   <div className="row">
                     {Stores.map((a, i) => {
-                      return <Store Stores={Stores} i={i}></Store>;
+                      return (
+                        <Store
+                          Stores={Stores}
+                          i={i}
+                          key={i}
+                          Navigate={Navigate}
+                          nav_now={nav_now}
+                          nav_change={nav_change}
+                        ></Store>
+                      );
                     })}
                   </div>
                 </div>
               </div>
             </>
+          }
+        ></Route>
+        <Route
+          path="/stores/:id"
+          element={
+            <Store_detail
+              Stores={Stores}
+              nav_now={nav_now}
+              nav_change={nav_change}
+            ></Store_detail>
           }
         ></Route>
       </Routes>
@@ -119,9 +142,31 @@ function App() {
 
 function Store(props) {
   return (
-    <div className="col-md-4 stores">
+    <div
+      className="col-4 stores"
+      onClick={() => {
+        props.Navigate(`/stores/${props.Stores[props.i].name}`);
+        props.nav_change(`${[props.i]}`);
+      }}
+    >
       <img src={props.Stores[props.i].img}></img>
       <p>{props.Stores[props.i].name}</p>
+    </div>
+  );
+}
+
+function Store_detail(props) {
+  return (
+    <div className="d-flex ">
+      <img src={props.Stores[props.nav_now].img}></img>
+      <div>
+        <h1>{props.Stores[props.nav_now].name}</h1>
+        <p></p>
+        <MapNaverDefault
+          Stores={props.Stores}
+          nav_now={props.nav_now}
+        ></MapNaverDefault>
+      </div>
     </div>
   );
 }

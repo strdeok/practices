@@ -2,53 +2,71 @@
   {
     "id": 1,
     "name": "주방일기",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230318_219%2F1679108620472ROueW_JPEG%2FIMG_20230308_180948_074.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230318_219%2F1679108620472ROueW_JPEG%2FIMG_20230308_180948_074.jpg",
+    "location": "37.5574761009119,126.9254638",
+    "info": "서울 마포구 양화로 178-8 2층 주방일기"
   },
 
   {
     "id": 2,
     "name": "호리",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_32%2F1698056209384PQ6PB_JPEG%2FIMG_4959.jpeg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231023_32%2F1698056209384PQ6PB_JPEG%2FIMG_4959.jpeg",
+    "location": "35.81637, 127.1428",
+    "info": "전북 전주시 완산구 전라감영3길 13-12 1층"
   },
 
   {
     "id": 3,
     "name": "이자카야잔",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200301_45%2F1583008153012lRYGu_JPEG%2F_R5lHQC4eZHoGZOIWsCZNb4y.jpeg.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200301_45%2F1583008153012lRYGu_JPEG%2F_R5lHQC4eZHoGZOIWsCZNb4y.jpeg.jpg",
+    "location": "37.6784826, 126.7558357",
+    "info": "경기 고양시 일산서구 대산로212번길 8-55 1층"
   },
 
   {
     "id": 4,
     "name": "개미집 서면본점",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_260%2F1441010891799aTWpy_JPEG%2F12068144_0.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_260%2F1441010891799aTWpy_JPEG%2F12068144_0.jpg",
+    "location": "35.15404, 129.0583",
+    "info": "부산 부산진구 신천대로62번길 73"
   },
 
   {
     "id": 5,
     "name": "을지로쎄시봉",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201015_28%2F1602771931649RxbPy_JPEG%2F_HJaxYcCxnnBrvrbTL9Fcejl.jpeg.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201015_28%2F1602771931649RxbPy_JPEG%2F_HJaxYcCxnnBrvrbTL9Fcejl.jpeg.jpg",
+    "location": "37.56362, 126.9932",
+    "info": "서울 중구 충무로 28 2층"
   },
 
   {
     "id": 6,
     "name": "매니멀스모크하우스",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEyMjBfMTYg%2FMDAxNzAzMDM3ODIwMzY4.u_53X9VJkThBK03N1ObFN6ayB3GK4D9aGMuLphjORG0g.A2__9RZ67ZuKgk7xFtdJcD5U6-jwvQoryFKEMPK5eYQg.JPEG%2F20231219_190521.jpg.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEyMjBfMTYg%2FMDAxNzAzMDM3ODIwMzY4.u_53X9VJkThBK03N1ObFN6ayB3GK4D9aGMuLphjORG0g.A2__9RZ67ZuKgk7xFtdJcD5U6-jwvQoryFKEMPK5eYQg.JPEG%2F20231219_190521.jpg.jpg",
+    "location": " 37.53465, 126.9891",
+    "info": "서울 용산구 녹사평대로40길 47 2층"
   },
   {
     "id": 7,
     "name": "하이볼 순",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_239%2F1693901191585R9nPN_JPEG%2F1000003979.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_239%2F1693901191585R9nPN_JPEG%2F1000003979.jpg",
+    "location": "37.60813, 126.9295",
+    "info": "서울 은평구 진흥로 180-1 1층"
   },
 
   {
     "id": 8,
     "name": "야끼니꾸소량 합정본점",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210912_204%2F1631451351860zFCzV_JPEG%2F3_Wgb_WOSbXWCN62RYAUeZht.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210912_204%2F1631451351860zFCzV_JPEG%2F3_Wgb_WOSbXWCN62RYAUeZht.jpg",
+    "location": "37.55259, 126.9066",
+    "info": "서울 마포구 포은로 38 1층 야끼니꾸소량"
   },
 
   {
     "id": 9,
     "name": "플레이그라운드브루어리 탭하우스",
-    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240215_129%2F17080055941497xjxb_JPEG%2F%25C5%25A9%25B1%25E2%25BA%25AF%25C8%25AFDSC05978.jpg"
+    "img": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240215_129%2F17080055941497xjxb_JPEG%2F%25C5%25A9%25B1%25E2%25BA%25AF%25C8%25AFDSC05978.jpg",
+    "location": "37.66547, 126.7561",
+    "info": "경기 고양시 일산서구 한류월드로 300 1층 1204호, 1205호"
   }
 ]
