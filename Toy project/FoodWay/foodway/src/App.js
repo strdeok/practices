@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import logo from "./assets/Foodflix.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Carousel, Card } from "react-bootstrap";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  useLocation,
+  Link,
+} from "react-router-dom";
 import Stores from "./products.json";
 import MapNaverDefault from "./map.js";
 
@@ -15,36 +21,43 @@ function App() {
   return (
     <div className="App ">
       {/* Nav bar */}
-      <Nav defaultActiveKey="/home" as="ul">
+      <Nav defaultActiveKey="/foodflix" as="ul">
         <Nav.Item as="li">
-          <Nav.Link href="/">
+          <Nav.Link href="/foodflix">
             <img className="logo" src={logo} alt="logo" />
           </Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link href="/korean">한식</Nav.Link>
+          <Link to="/korean" className="nav-link">
+            한식
+          </Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link href="/western">양식</Nav.Link>
+          <Link to="/western" className="nav-link">
+            양식
+          </Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link href="/chinese">중식</Nav.Link>
+          <Link to="/chinese" className="nav-link">
+            중식
+          </Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link href="/japanese">일식</Nav.Link>
+          <Link to="/japanese" className="nav-link">
+            일식
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/price">가격대별로 보기</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/random">랜덤</Nav.Link>
+          <Link to="/random" className="nav-link">
+            랜덤
+          </Link>
         </Nav.Item>
       </Nav>
 
       <Routes>
         {/* home화면 */}
         <Route
-          path="/"
+          path="/foodflix"
           element={
             <>
               <div className="main">
@@ -135,10 +148,11 @@ function App() {
             ></Store_detail>
           }
         ></Route>
+        {/* 음식 카테고리 */}
         <Route
           path="/korean"
           element={
-            <>
+            <div className="type">
               <div className="row">
                 {Stores.map((a, i) => {
                   return (
@@ -147,17 +161,18 @@ function App() {
                       i={i}
                       key={i}
                       now_type={now_type}
+                      width="col-6"
                     ></Type>
                   );
                 })}
               </div>
-            </>
+            </div>
           }
         />
         <Route
           path="/western"
           element={
-            <>
+            <div className="type">
               <div className="row">
                 {Stores.map((a, i) => {
                   return (
@@ -166,18 +181,19 @@ function App() {
                       i={i}
                       key={i}
                       now_type={now_type}
+                      width="col-4"
                     ></Type>
                   );
                 })}
               </div>
-            </>
+            </div>
           }
         />
 
         <Route
           path="/chinese"
           element={
-            <>
+            <div className="type">
               <div className="row">
                 {Stores.map((a, i) => {
                   return (
@@ -186,18 +202,19 @@ function App() {
                       i={i}
                       key={i}
                       now_type={now_type}
+                      width="col-4"
                     ></Type>
                   );
                 })}
               </div>
-            </>
+            </div>
           }
         />
 
         <Route
           path="/japanese"
           element={
-            <>
+            <div className="type">
               <div className="row">
                 {Stores.map((a, i) => {
                   return (
@@ -206,13 +223,24 @@ function App() {
                       i={i}
                       key={i}
                       now_type={now_type}
+                      width="col-4"
                     ></Type>
                   );
                 })}
               </div>
-            </>
+            </div>
           }
         />
+
+        {/* 랜덤음식 */}
+        <Route
+          path="/random"
+          element={
+            <div className="random">
+              <Random Stores={Stores}></Random>
+            </div>
+          }
+        ></Route>
       </Routes>
     </div>
   );
@@ -227,7 +255,7 @@ function Store(props) {
         props.nav_change(`${[props.i]}`);
       }}
     >
-      <img src={props.Stores[props.i].img}></img>
+      <img src={props.Stores[props.i].img} alt=""></img>
       <p>{props.Stores[props.i].name}</p>
     </div>
   );
@@ -238,7 +266,7 @@ function Store_detail(props) {
   let recommend_img = props.Stores[props.nav_now].recommend_img;
   return (
     <div className="d-flex ">
-      <img src={props.Stores[props.nav_now].img}></img>
+      <img src={props.Stores[props.nav_now].img} alt=""></img>
       <div>
         <div className="top">
           <h1>{props.Stores[props.nav_now].name}</h1>
@@ -275,7 +303,7 @@ function Store_detail(props) {
 function Type(props) {
   if (props.now_type.pathname === `/${props.Stores[props.i].type}`) {
     return (
-      <div className="col-4">
+      <div className={props.width}>
         <Card style={{ width: "100%" }}>
           <Card.Img variant="top" src={props.Stores[props.i].img} />
           <Card.Body>
@@ -286,6 +314,43 @@ function Type(props) {
       </div>
     );
   }
+}
+
+function Random(props) {
+  let random = Math.floor(Math.random() * (props.Stores.length - 1) + 1);
+  let recommend = props.Stores[random].recommend;
+  let recommend_img = props.Stores[random].recommend_img;
+
+  return (
+    <div className="d-flex random">
+      <img src={props.Stores[random].img} alt=""></img>
+      <div>
+        <div className="top">
+          <h1>{props.Stores[random].name}</h1>
+          <h5>&lt; 추천메뉴 &gt;</h5>
+          <ul>
+            {recommend.map((a, i) => {
+              return <li key={i}>{a}</li>;
+            })}
+          </ul>
+        </div>
+        <div className="bottom">
+          <Carousel className="detail-slide">
+            <Carousel.Item>
+              <img src={recommend_img[0]} alt="First slide" />
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img src={recommend_img[1]} alt="Second slide" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={recommend_img[2]} alt="Third slide" />
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
